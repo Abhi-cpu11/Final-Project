@@ -1,0 +1,49 @@
+html {
+  /* Enable smooth scrolling for anchor links */
+  scroll-behavior: smooth;
+}
+
+* {
+  /* Reset margins, padding, and use border-box for all elements */
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  /* Set background to black for contrast and a modern look */
+  background-color: #000000;
+  /* Set default text color to white */
+  color: #ffffff;
+  /* Use sans-serif font for a clean, futuristic feel */
+  font-family: Helvetica, Arial, sans-serif;
+  /* Set line spacing for readability */
+  line-height: 1.4;
+  /* Add spacing between letters */
+  letter-spacing: 1px;
+  /* Add spacing between words */
+  word-spacing: 0.9px;
+  /* Set base font size */
+  font-size: 1.2rem;
+  /* Add margin to left and right */
+  margin: 0 20px;
+}
+
+nav {
+}
+
+footer {
+}
+
+footer .social-media-links {
+}
+
+section {
+}
+
+div {
+}
+
+.grid {
+}
