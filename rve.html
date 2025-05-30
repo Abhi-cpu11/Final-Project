@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2040 | Coach Kalkat</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--neutral-white);
+        color: var(--text-black);
+        line-height: 1.6;
+      }
+
+      header {
+        background-color: var(--primary-color);
+        color: var(--neutral-white);
+        padding: 1.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header nav a {
+        color: var(--neutral-white);
+        margin-left: 1.5rem;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .hero {
+        background: url("https://images.unsplash.com/photo-1602691524771-dfa3b402b2e3")
+          no-repeat center center/cover;
+        height: 85vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--neutral-white);
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .cta-btn {
+        background-color: var(--accent-color);
+        color: var(--neutral-white);
+        padding: 0.8rem 1.6rem;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: background 0.3s ease;
+      }
+
+      .cta-btn:hover {
+        background-color: #e65a00;
+      }
+
+      .section {
+        padding: 4rem 2rem;
+        background-color: var(--neutral-gray);
+        text-align: center;
+      }
+
+      .section h2 {
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+      }
+
+      .section p,
+      ul {
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+      }
+
+      .section ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      .section ul li {
+        margin: 0.75rem 0;
+      }
+
+      footer {
+        background-color: var(--primary-color);
+        color: var(--neutral-white);
+        text-align: center;
+        padding: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div><strong>2040 | Coach Kalkat</strong></div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#philosophy">Philosophy</a>
+        <a href="#programs">Programs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Coach Kalkat</h1>
+      <p>Elevating Basketball Through Leadership, Vision, and Hustle</p>
+      <button class="cta-btn">View My Philosophy</button>
+    </section>
+
+    <section class="section" id="philosophy">
+      <h2>Coaching Philosophy</h2>
+      <p>
+        I believe in building high-IQ, high-effort players. My coaching is
+        rooted in discipline, decision-making, and player development that lasts
+        beyond the court.
+      </p>
+    </section>
+
+    <section class="section" id="programs">
+      <h2>Programs Offered</h2>
+      <ul>
+        <li>🟠 Off-Season Development Camps</li>
+        <li>🟠 1-on-1 Skill Sessions</li>
+        <li>🟠 Game IQ & Video Breakdown</li>
+        <li>🟠 Leadership & Mental Toughness Training</li>
+      </ul>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p>Let’s connect and build your basketball future.</p>
+      <p>Email: coachkalkat@2040hoops.com</p>
+    </section>
+
+    <footer>
+      <p>© 2040 Coach Kalkat | All rights reserved</p>
+    </footer>
+  </body>
+</html>
