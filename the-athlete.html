@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Athlete</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      .video-container {
+        /* Position relative allows absolute positioning inside if needed */
+        position: relative;
+        /* Make width 80% of parent container, max 960px */
+        width: 80%;
+        max-width: 960px;
+        /* Maintain a 16:9 aspect ratio for the video container, addtional feature not leanred in class */
+        aspect-ratio: 16 / 9;
+        /* Center container with 5rem margin on top and bottom */
+        margin: 5rem auto;
+        /* Blue border around the video */
+        border: 4px solid #00e5ff;
+        /* Rounded corners on the container */
+        border-radius: 1rem;
+        /* Soft glowing shadow with partial transparency */
+        -webkit-box-shadow: 0 0 25px #00e5ff88;
+        box-shadow: 0 0 25px #00e5ff88;
+        /* Smooth transition for transform and box-shadow changes on hover */
+        -webkit-transition: -webkit-transform 0.4s ease-in-out,
+          -webkit-box-shadow 0.4s ease-in-out;
+        transition: -webkit-transform 0.4s ease-in-out,
+          -webkit-box-shadow 0.4s ease-in-out;
+        -o-transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+        transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+        transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out,
+          -webkit-transform 0.4s ease-in-out,
+          -webkit-box-shadow 0.4s ease-in-out;
+        /* Prevent content overflow from showing outside rounded corners */
+        overflow: hidden;
+      }
+      /* Hover effect for the video container */
+      .video-container:hover {
+        /* Slight zoom in */
+        -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        transform: scale(1.02);
+        /* Intensify glowing shadow on hover */
+        -webkit-box-shadow: 0 0 60px #00e5ffaa;
+        box-shadow: 0 0 60px #00e5ffaa;
+      }
+      /* Style the iframe to fill the container */
+      .video-container iframe {
+        /* Make iframe take full width */
+        width: 100%;
+        /* Make iframe take full height */
+        height: 100%;
+        /* Remove default iframe border */
+        border: none;
+        /* Display block removes inline spacing */
+        display: block;
+      }
+      .video-link {
+        /* Center the text */
+        text-align: center;
+        /* Add margin for spacing closer to video */
+        margin-top: -3.5rem;
+        /* hard to read with glow*/
+        opacity: 0.9;
+      }
+      .video-link a {
+        /* color yellow */
+        color: #f2ff3d;
+      }
+
+      .video-link a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <header>
+    <!-- Navigation links -->
+    <nav>
+      <a href="index.html">MY COACHING PHILOSOPHY</a>
+      <a href="testimonies.html"> RELIABLE TESTIMONIES</a>
+      <a href="the-athlete.html">THE ALTHETE</a>
+      <a href="contact-us.html">CONTACT</a>
+    </nav>
+  </header>
+  <body>
+    <main>
+      <!-- Video section container with accessible label -->
+      <section class="video-container">
+        <!-- Embedded YouTube video iframe -->
+        <iframe
+          src="https://www.youtube.com/embed/ODH13-YOeyE"
+          title="Naawi-Oodena Development Overview"
+          allowfullscreen></iframe>
+      </section>
+
+      <!-- Move the paragraph OUTSIDE of the fixed-height container -->
+      <section>
+        <p class="video-link">
+          <a href="https://www.youtube.com/watch?v=ODH13-YOeyE" target="_blank">
+            Watch the Naawi-Oodena Development Overview on YouTube By Clicking
+            On This Text.
+          </a>
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>© 2040 Coach Abhijay | Future Sea Bears Coach | All rights reserved</p>
+    </footer>
+    <script>
+      //For the dropdown
+    </script>
+  </body>
+</html>

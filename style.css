@@ -1,3 +1,8 @@
+/*Color family complementry 
+primary: #3DA1FF  
+secondary: #FF9B3D 
+neutrals:
+white for text, black background 8*/
 html {
   /* Enable smooth scrolling for anchor links */
   scroll-behavior: smooth;
@@ -18,22 +23,88 @@ body {
   /* Set default text color to white */
   color: #ffffff;
   /* Use sans-serif font for a clean, futuristic feel */
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Replica", "Helvetica Neue", Helvetica, Arial, sans-serif;
   /* Set line spacing for readability */
   line-height: 1.4;
   /* Add spacing between letters */
   letter-spacing: 1px;
   /* Add spacing between words */
   word-spacing: 0.9px;
-  /* Add margin to left and right */
+  /* Add margin to left and right like said in wireframe */
   margin: 0 20px;
   font-size: 1.6rem;
 }
 
+header {
+  /* Fix the header to the top */
+  position: fixed;
+  /* Position at top of page */
+  top: 0;
+  /* Stretch across full width */
+  width: 100%;
+  /* Ensure it's above other content */
+  z-index: 1;
+  /* Add blur effect behind header */
+  /* Align items horizontally */
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  /* Semi-transparent background for layered look */
+  background: rgba(20, 20, 20, 0.6);
+  /* Cyan border at the bottom for visual separation, and good use of secondary */
+  border-bottom: 3px solid #ffffff;
+  /* Align items horizontally */
+  /*prefixes so it doesn't break in other browsers*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  /* Add padding inside header */
+  padding: 1rem 2rem;
+  /* Cancel out body’s 20px margin */
+  margin-left: -20px;
+}
+
 nav {
+  /* Align nav items in a row */
+  /*prefixes so it doesn't break in other browsers*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Allow items to wrap if screen is small */
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /* Set space between items */
+  gap: 1.5rem;
+}
+
+nav a {
+  /* White link text */
+  color: #ffffff;
+  /* Remove underline */
+  text-decoration: none;
+  /* Make text bold */
+  font-weight: bold;
+  /* Required for ::after positioning */
+  position: relative;
+  /* Smooth color transition on hover */
+  /*prefixes so it doesn't break in other browsers*/
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+nav ul {
 }
 
 footer {
+  /* Cyan top border for separation */
+  border-top: 3px solid #ffffff;
+  width: 100%;
 }
 
 footer .social-media-links {
@@ -43,7 +114,20 @@ section {
 }
 
 div {
+  /* Black background for consistency */
+  background-color: black;
+  /* Padding inside the div */
+  padding: 20px;
+  /* Rounded corners */
+  border-radius: 5px;
 }
 
-.grid {
+.logos-grid {
+}
+
+main {
+  /* Create visual separation between cyan border and yellow border */
+  margin-top: 9rem;
+  /* Keep your yellow border good use of secondary and to display main information is in the yellow border */
+  border: 0.5px solid #3da1ff;
 }
