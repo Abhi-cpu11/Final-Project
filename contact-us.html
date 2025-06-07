@@ -6,14 +6,30 @@
     <title>Contact Me</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <header>
-    <!-- Navigation links -->
-    <nav>
-      <a href="index.html">MY COACHING PHILOSOPHY</a>
-      <a href="testimonies.html"> RELIABLE TESTIMONIES</a>
-      <a href="the-athlete.html">THE ALTHETE</a>
-      <a href="contact-us.html">CONTACT</a>
-    </nav>
-  </header>
-  <body></body>
+  <body>
+    <header>
+      <!-- NAVIGATION BAR  -->
+      <nav id="navbar">
+        <button class="menu-toggle" id="openBtn" onclick="openOverlay()">
+          ☰
+        </button>
+        <div class="logo">COACH KALKAT</div>
+      </nav>
+
+      <!-- FULLSCREEN OVERLAY MENU -->
+      <div id="overlay">
+        <div class="overlay-logo">COACH KALKAT</div>
+        <a href="index.html" onclick="closeOverlay()">MY COACHING PHILOSOPHY</a>
+        <a href="testimonies.html" onclick="closeOverlay()"
+          >RELIABLE TESTIMONIES</a
+        >
+        <a href="the-athlete.html" onclick="closeOverlay()">THE ATHLETE</a>
+        <a href="contact-us.html" onclick="closeOverlay()">CONTACT</a>
+      </div>
+      <button class="close-btn" id="closeBtn" onclick="closeOverlay()">
+        ×
+      </button>
+    </header>
+    <script src="script.js"></script>
+  </body>
 </html>

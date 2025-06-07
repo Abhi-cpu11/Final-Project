@@ -1,4 +1,4 @@
-/*Color family complementry 
+/*Color family complementrylike newyork colors, where i want to coach . 
 primary: #3DA1FF  
 secondary: #FF9B3D 
 neutrals:
@@ -35,70 +35,108 @@ body {
   font-size: 1.6rem;
 }
 
-header {
-  /* Fix the header to the top */
-  position: fixed;
-  /* Position at top of page */
-  top: 0;
-  /* Stretch across full width */
-  width: 100%;
-  /* Ensure it's above other content */
-  z-index: 1;
-  /* Add blur effect behind header */
-  /* Align items horizontally */
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  /* Semi-transparent background for layered look */
-  background: rgba(20, 20, 20, 0.6);
-  /* Cyan border at the bottom for visual separation, and good use of secondary */
-  border-bottom: 3px solid #ffffff;
-  /* Align items horizontally */
-  /*prefixes so it doesn't break in other browsers*/
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  /* Add padding inside header */
-  padding: 1rem 2rem;
-  /* Cancel out body’s 20px margin */
-  margin-left: -20px;
-}
-
 nav {
-  /* Align nav items in a row */
-  /*prefixes so it doesn't break in other browsers*/
-  display: -webkit-box;
-  display: -ms-flexbox;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
-  /* Allow items to wrap if screen is small */
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  /* Set space between items */
-  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-nav a {
-  /* White link text */
-  color: #ffffff;
-  /* Remove underline */
-  text-decoration: none;
-  /* Make text bold */
+.logo {
+  font-size: 24px;
   font-weight: bold;
-  /* Required for ::after positioning */
-  position: relative;
-  /* Smooth color transition on hover */
-  /*prefixes so it doesn't break in other browsers*/
-  -webkit-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
-  transition: color 0.3s ease;
+  letter-spacing: 2px;
+  text-align: center;
+  flex-grow: 1;
 }
 
-nav ul {
+.menu-toggle,
+.close-btn {
+  position: absolute;
+  left: 30px;
+  font-size: 42px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  color: white;
+  display: block;
+}
+
+.close-btn {
+  color: #f58426;
+  position: fixed; /* Important: make it fixed */
+  top: 20px;
+  left: 30px;
+  font-size: 42px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.close-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+}
+
+/* FULLSCREEN OVERLAY MENU */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 13;
+  opacity: 0;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+#overlay.fade-in {
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 1.2s ease;
+}
+
+.overlay-logo {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+#overlay a {
+  font-size: 26px;
+  text-decoration: none;
+  color: white;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+
+#overlay a:hover {
+  color: #f58426;
 }
 
 footer {
@@ -108,14 +146,36 @@ footer {
 }
 
 footer .social-media-links {
+  /* Align icons horizontally */
+  /*prefixes so it doesn't break in other browsers*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Spaces them evenly  */
+  /* Align items horizontally */
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  /* Center them */
+  -ms-flex-line-pack: center;
+  align-content: center;
+  /* Allow wrap on small screens */
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /* Prevent items from growing too large or shrinking too small */
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  /* Space between icons */
+  gap: 3vw;
 }
 
 section {
 }
 
 div {
-  /* Black background for consistency */
-  background-color: black;
   /* Padding inside the div */
   padding: 20px;
   /* Rounded corners */

@@ -79,13 +79,25 @@
   </head>
 
   <header>
-    <!-- Navigation links -->
-    <nav>
-      <a href="index.html">MY COACHING PHILOSOPHY</a>
-      <a href="testimonies.html"> RELIABLE TESTIMONIES</a>
-      <a href="the-athlete.html">THE ALTHETE</a>
-      <a href="contact-us.html">CONTACT</a>
+    <!-- NAVIGATION BAR  -->
+    <nav id="navbar">
+      <button class="menu-toggle" id="openBtn" onclick="openOverlay()">
+        ☰
+      </button>
+      <div class="logo">COACH KALKAT</div>
     </nav>
+
+    <!-- FULLSCREEN OVERLAY MENU -->
+    <div id="overlay">
+      <div class="overlay-logo">COACH KALKAT</div>
+      <a href="index.html" onclick="closeOverlay()">MY COACHING PHILOSOPHY</a>
+      <a href="testimonies.html" onclick="closeOverlay()"
+        >RELIABLE TESTIMONIES</a
+      >
+      <a href="the-athlete.html" onclick="closeOverlay()">THE ATHLETE</a>
+      <a href="contact-us.html" onclick="closeOverlay()">CONTACT</a>
+    </div>
+    <button class="close-btn" id="closeBtn" onclick="closeOverlay()">×</button>
   </header>
   <body>
     <main>
@@ -93,7 +105,7 @@
       <section class="video-container">
         <!-- Embedded YouTube video iframe -->
         <iframe
-          src="https://www.youtube.com/embed/ODH13-YOeyE"
+          src="https://youtu.be/evL0CE33WSc?si=8R8p515VdVhdnHRJ"
           title="Naawi-Oodena Development Overview"
           allowfullscreen></iframe>
       </section>
@@ -101,7 +113,9 @@
       <!-- Move the paragraph OUTSIDE of the fixed-height container -->
       <section>
         <p class="video-link">
-          <a href="https://www.youtube.com/watch?v=ODH13-YOeyE" target="_blank">
+          <a
+            href="https://youtu.be/evL0CE33WSc?si=8R8p515VdVhdnHRJ"
+            target="_blank">
             Watch the Naawi-Oodena Development Overview on YouTube By Clicking
             On This Text.
           </a>
@@ -115,4 +129,5 @@
       //For the dropdown
     </script>
   </body>
+  <script src="script.js"></script>
 </html>
