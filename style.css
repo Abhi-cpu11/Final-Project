@@ -44,7 +44,7 @@ nav {
   justify-content: center;
   align-items: center;
   padding: 20px 40px;
-  z-index: 1;
+  z-index: 100000;
   transition: background-color 0.3s ease;
   background-color: rgba(0, 0, 0, 0.7);
 }
@@ -81,7 +81,7 @@ nav {
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 9999;
+  z-index: 100001; /* Ensure it is above other elements */
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s ease;
@@ -187,7 +187,46 @@ div {
 
 main {
   /* Create visual separation between cyan border and yellow border */
-  margin-top: 9rem;
+  margin-top: 13rem;
   /* Keep your yellow border good use of secondary and to display main information is in the yellow border */
   border: 0.5px solid #3da1ff;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen */
+  overflow: hidden;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5); /* Darken slightly for contrast */
+  z-index: 4;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  color: white;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 2rem;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  letter-spacing: 3px;
+}
+
+.hero-content p {
+  font-size: 2rem;
+  margin-top: 1rem;
+  color: #ff9b3d; /* Your secondary color */
 }
