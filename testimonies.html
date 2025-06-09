@@ -5,6 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Testimonies</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      .testimonials-banner {
+        background-color: #000;
+        color: white;
+        text-align: center;
+        padding: 4rem 2rem;
+      }
+
+      .testimonials-banner h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        color: #ff9b3d;
+      }
+
+      .testimonial-slider {
+        position: relative;
+        width: 160px;
+        height: 160px;
+        margin: 0 auto;
+      }
+
+      .slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        opacity: 0;
+        animation: fadeCycle 20s infinite;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      /* Animations for each image using delay */
+      .slide1 {
+        animation-delay: 0s;
+      }
+      .slide2 {
+        animation-delay: 5s;
+      }
+      .slide3 {
+        animation-delay: 10s;
+      }
+      .slide4 {
+        animation-delay: 15s;
+      }
+
+      /* Keyframes: fade each image in and out */
+      @keyframes fadeCycle {
+        0% {
+          opacity: 0;
+        }
+        5% {
+          opacity: 1;
+        }
+        25% {
+          opacity: 1;
+        }
+        30% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -31,6 +96,51 @@
         ×
       </button>
     </header>
+    <main>
+      <section class="testimonials-banner">
+        <h2>Trusted by the Best</h2>
+        <div class="testimonial-slider">
+          <img src="cooper-flag.jpg" alt="Klay Thompson" class="slide slide1" />
+          <img
+            src="angel-reese.jpg"
+            alt="Serena Williams"
+            class="slide slide2" />
+          <img
+            src="Tyran-Stokes-High-School-Basketball.jpg"
+            alt="LeBron James"
+            class="slide slide3" />
+          <img
+            src="aj-dybantsa-byu-basketball-robert-wright-transfer.jpg"
+            alt="Coach K"
+            class="slide slide4" />
+        </div>
+      </section>
+    </main>
+    <footer>
+      <!-- Social media container -->
+      <div class="social-media">
+        <div class="social-media-links">
+          <!-- Instagram -->
+          <a href="https://www.instagram.com" target="_blank">
+            <img src="instagram-new.png" alt="Instagram logo" />
+          </a>
+          <!-- YouTube -->
+          <a href="https://www.youtube.com" target="_blank">
+            <img src="youtube-play.png" alt="YouTube logo" />
+          </a>
+          <!-- TikTok -->
+          <a href="https://www.tiktok.com/en/" target="_blank">
+            <img src="tiktok.png" alt="TikTok logo" />
+          </a>
+        </div>
+      </div>
+      <!-- Quote -->
+      <p>
+        "Basketball is the most reliable thing in the world. Don't blame, don't
+        ask any questions. You bounce, it comes right back. What's there not to
+        love?" Uncle Drew.
+      </p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

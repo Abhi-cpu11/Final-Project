@@ -35,13 +35,13 @@ Date Last Modified: June 13, 2025
         z-index: 4;
       }
 
-      .coach-k-pic-content {
-        position: relative;
-        z-index: 5;
-        color: white;
-        text-align: center;
+      #coach-k-pic-content {
+        position: absolute;
         top: 50%;
-        transform: translateY(-50%);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+        text-align: center;
         padding: 0 2rem;
       }
 
@@ -159,9 +159,9 @@ Date Last Modified: June 13, 2025
         padding: 0 2rem;
         display: flex;
         flex-direction: column;
-        align-items: flex-end; /* 👈 This aligns all content to the right */
+        align-items: flex-end;
         color: white;
-        text-align: right; /* 👈 This aligns the text inside the box */
+        text-align: right;
       }
 
       .right-content h2 {
@@ -177,8 +177,6 @@ Date Last Modified: June 13, 2025
 
       .right-content li {
         margin-bottom: 1.5rem;
-        font-size: 1.6rem;
-        line-height: 1.6;
       }
 
       .label {
@@ -219,7 +217,7 @@ Date Last Modified: June 13, 2025
           alt="Coach Kalkat"
           class="coach-k-pic-image" />
         <div id="coach-k-pic-content">
-          <p>This is not for everyone</p>
+          <p>"This is not for everyone" - Coach Kalkat</p>
         </div>
       </section>
 
@@ -366,7 +364,11 @@ Date Last Modified: June 13, 2025
         </div>
       </div>
       <!-- Quote -->
-      <p>"I will never forget where I came from"</p>
+      <p>
+        "Basketball is the most reliable thing in the world. Don't blame, don't
+        ask any questions. You bounce, it comes right back. What's there not to
+        love?" Uncle Drew.
+      </p>
     </footer>
     <script src="script.js"></script>
   </body>
