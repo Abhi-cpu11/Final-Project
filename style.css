@@ -55,6 +55,7 @@ nav {
   letter-spacing: 2px;
   text-align: center;
   flex-grow: 1;
+  color: #3da1ff;
 }
 
 .menu-toggle,
@@ -140,36 +141,29 @@ nav {
 }
 
 footer {
-  /* Cyan top border for separation */
+  text-align: center;
   border-top: 3px solid #ffffff;
-  width: 100%;
+  width: 100vw;
+  margin-left: -20px;
+}
+
+footer .social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer .social-media-links {
-  /* Align icons horizontally */
-  /*prefixes so it doesn't break in other browsers*/
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  /* Spaces them evenly  */
-  /* Align items horizontally */
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
-  /* Center them */
-  -ms-flex-line-pack: center;
-  align-content: center;
-  /* Allow wrap on small screens */
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  /* Prevent items from growing too large or shrinking too small */
-  -webkit-box-flex: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  /* Space between icons */
-  gap: 3vw;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .social-media-links img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
 
 section {
@@ -188,45 +182,17 @@ div {
 main {
   /* Create visual separation between cyan border and yellow border */
   margin-top: 13rem;
+  margin-bottom: 10rem;
   /* Keep your yellow border good use of secondary and to display main information is in the yellow border */
   border: 0.5px solid #3da1ff;
 }
 
-.hero {
-  position: relative;
+.left-right-section {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
   width: 100%;
-  height: 100vh; /* Full screen */
-  overflow: hidden;
-}
-
-.hero-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.5); /* Darken slightly for contrast */
-  z-index: 4;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 5;
-  color: white;
-  text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 0 2rem;
-}
-
-.hero-content h1 {
-  font-size: 4rem;
-  letter-spacing: 3px;
-}
-
-.hero-content p {
-  font-size: 2rem;
-  margin-top: 1rem;
-  color: #ff9b3d; /* Your secondary color */
+  padding: 4rem 0;
+  box-sizing: border-box;
 }

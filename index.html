@@ -17,7 +17,176 @@ Date Last Modified: June 13, 2025
     <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="style.css" />
 
-    <style></style>
+    <style>
+      .coach-k-pic {
+        position: relative;
+        width: 100%;
+        height: 100vh; /* Full screen */
+        overflow: hidden;
+      }
+
+      .coach-k-pic-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 4;
+      }
+
+      .coach-k-pic-content {
+        position: relative;
+        z-index: 5;
+        color: white;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0 2rem;
+      }
+
+      .coach-k-pic-content h1 {
+        font-size: 4rem;
+        letter-spacing: 3px;
+      }
+
+      #coach-k-pic-content p {
+        font-size: 2rem;
+        margin-top: 1rem;
+        color: #ff9b3d;
+      }
+
+      /*THIS IS FOR THE GRID FOR IMAGES OF TEAMS*/
+      .coach-logos-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 4rem 2rem;
+        margin-right: 3vw;
+        flex: 1;
+      }
+
+      .coach-logos-section h2 {
+        font-size: 2.8rem;
+        color: #ff9b3d;
+        margin-bottom: 2rem;
+        text-align: right;
+        flex-wrap: nowrap;
+      }
+
+      .logos-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 100px);
+        grid-auto-rows: 100px;
+        gap: 2rem;
+        justify-content: end;
+      }
+
+      .logos-grid img {
+        width: 100px;
+        height: 100px;
+        padding: 1rem;
+      }
+
+      /* RESUME SECTION */
+
+      .resume-left {
+        flex: 0 0 70%;
+        max-width: 700px;
+        padding: 2rem;
+        color: white;
+      }
+
+      .resume-left h2 {
+        font-size: 2.8rem;
+        color: #ff9b3d;
+        margin-bottom: 2rem;
+      }
+
+      .resume-left p {
+        margin-bottom: 2rem;
+      }
+
+      .year {
+        color: #3da1ff;
+        font-weight: bold;
+        display: inline-block;
+        width: 60px;
+      }
+
+      .team {
+        color: #ff9b3d;
+        font-weight: bold;
+      }
+
+      .role {
+        font-style: italic;
+      }
+
+      .highlight {
+        color: #3da1ff;
+        font-weight: 500;
+      }
+
+      .left-right-section {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        padding: 4rem 0;
+        box-sizing: border-box;
+      }
+
+      /* LEFT IMAGE */
+      .left-image {
+        flex: 0 0 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .left-image img {
+        max-width: 100%;
+        max-height: 400px;
+        border-radius: 12px;
+        object-fit: cover;
+      }
+
+      /* RIGHT TEXT CONTENT */
+      .right-content {
+        flex: 1;
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; /* 👈 This aligns all content to the right */
+        color: white;
+        text-align: right; /* 👈 This aligns the text inside the box */
+      }
+
+      .right-content h2 {
+        font-size: 2.8rem;
+        color: #ff9b3d;
+        margin-bottom: 1.5rem;
+      }
+
+      .right-content ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .right-content li {
+        margin-bottom: 1.5rem;
+        font-size: 1.6rem;
+        line-height: 1.6;
+      }
+
+      .label {
+        color: #3da1ff;
+        font-weight: bold;
+        margin-right: 0.5rem;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -44,38 +213,160 @@ Date Last Modified: June 13, 2025
       </button>
     </header>
     <main>
-      <section class="hero">
-        <img src="coach-kalkatt.png" alt="Coach Kalkat" class="hero-image" />
-        <div class="hero-content">
-          <p>This is not for everyone.</p>
+      <section class="coach-k-pic">
+        <img
+          src="coach-kalkatt.png"
+          alt="Coach Kalkat"
+          class="coach-k-pic-image" />
+        <div id="coach-k-pic-content">
+          <p>This is not for everyone</p>
+        </div>
+      </section>
+
+      <section class="left-right-section">
+        <!-- LEFT: Resume -->
+        <div class="resume-left">
+          <h2>Resume</h2>
+          <p>
+            <span class="year">2030</span>
+            <span class="team">PTC Academy</span>
+            <span class="role">Player Development Coach</span><br />
+            Helped players transition from recreational to competitive.
+            Emphasized <span class="highlight">IQ</span> and
+            <span class="highlight">spacing</span>.
+          </p>
+
+          <p>
+            <span class="year">2030</span>
+            <span class="team">Junior Bisons</span>
+            <span class="role">U17 & College Team</span><br />
+            Started with U17 and was promoted to the college coaching staff.
+            Focused on <span class="highlight">maturity</span>,
+            <span class="highlight">defense</span>, and
+            <span class="highlight">team systems</span>.
+          </p>
+
+          <p>
+            <span class="year">2030</span> <span class="team">Team Toba</span>
+            <span class="role">Assistant Coach – Canada Games</span><br />
+            Worked with top Manitoba talent. Contributed to
+            <span class="highlight">system planning</span> and
+            <span class="highlight">scouting</span>.
+          </p>
+
+          <p>
+            <span class="year">2030</span>
+            <span class="team">UPlay Canada EYBL U17</span>
+            <span class="role">Assistant Coach</span><br />
+            Joined one of Canada's top AAU programs. Qualified for
+            <span class="highlight">Peach Jam</span> and competed nationally.
+          </p>
+
+          <p>
+            <span class="year">2030</span> <span class="team">Sea Bears</span>
+            <span class="role">CEBL Player Development Consultant</span><br />
+            Helped bridge younger Canadian players into the
+            <span class="highlight">professional circuit</span>.
+          </p>
+
+          <p>
+            <span class="year">2030</span> <span class="team">UCLA</span>
+            <span class="role">Graduate Assistant</span><br />
+            Focused on <span class="highlight">film scouting</span> and
+            <span class="highlight">guard development</span> in a high-tempo
+            system.
+          </p>
+
+          <p>
+            <span class="year">2031</span> <span class="team">Auburn</span>
+            <span class="role">Assistant Coach – Recruiting</span><br />
+            Joined Bruce Pearl’s staff. Helped land a
+            <span class="highlight">top-20 recruiting class</span>.
+          </p>
+
+          <p>
+            <span class="year">2032</span>
+            <span class="team">University of Florida</span>
+            <span class="role">Associate Coach</span><br />
+            Led <span class="highlight">defensive strategy</span> and
+            <span class="highlight">backcourt development</span>. Reached the
+            <span class="highlight">Sweet 16</span>.
+          </p>
+
+          <p>
+            <span class="year">2034</span>
+            <span class="team">New York Knicks</span>
+            <span class="role">Assistant Coach</span><br />
+            Joined <span class="highlight">Charen Gambir’s staff</span> to
+            rebuild team identity and player culture.
+          </p>
+
+          <p>
+            <span class="year">2036</span> <span class="role">Retired</span
+            ><br />
+            Committed to <span class="highlight">giving back</span> and
+            developing the next generation of talent.
+          </p>
+        </div>
+
+        <!-- RIGHT: Logos -->
+        <div class="coach-logos-section">
+          <h2>Where I've Coached</h2>
+          <div class="logos-grid">
+            <img src="ucla.jpg" alt="Team 1" />
+            <img src="ucla.jpg" alt="Team 2" />
+            <img src="ucla.jpg" alt="Team 3" />
+            <img src="ucla.jpg" alt="Team 4" />
+            <img src="ucla.jpg" alt="Team 5" />
+          </div>
+        </div>
+      </section>
+
+      <section class="left-right-section">
+        <!-- Left: Image -->
+        <div class="left-image">
+          <img src="coach-kalkatt.png" alt="Coach Kalkat" />
+        </div>
+
+        <!-- Right: Coaching Style Description -->
+        <div class="right-content">
+          <h2>My Coaching Style</h2>
+          <ul>
+            <li>
+              <span class="label">Pace Paced:</span> Push the ball in transition
+            </li>
+            <li>
+              <span class="label">Defense:</span> Not playing defense? You're on
+              the bench
+            </li>
+            <li>
+              <span class="label">Put the Ball in the Hoop:</span> 3, middy,
+              layup—anything
+            </li>
+          </ul>
         </div>
       </section>
     </main>
     <footer>
+      <!-- Social media container -->
+      <div class="social-media">
+        <div class="social-media-links">
+          <!-- Instagram -->
+          <a href="https://www.instagram.com" target="_blank">
+            <img src="instagram-new.png" alt="Instagram logo" />
+          </a>
+          <!-- YouTube -->
+          <a href="https://www.youtube.com" target="_blank">
+            <img src="youtube-play.png" alt="YouTube logo" />
+          </a>
+          <!-- TikTok -->
+          <a href="https://www.tiktok.com/en/" target="_blank">
+            <img src="tiktok.png" alt="TikTok logo" />
+          </a>
+        </div>
+      </div>
       <!-- Quote -->
       <p>"I will never forget where I came from"</p>
-      <!-- Social media links (to be completed later when the owner is ready to implement them) -->
-      <div class="social-media-links">
-        <!--Instagram logo and link-->
-        <a href="https://www.instagram.com" target="_blank">
-          <img
-            src="instagram-new.png"
-            alt=" minimalist white camera outline on a vibrant gradient background that fades from purple to pink to orange to yellow" />Instagram
-        </a>
-        <!--Youtube logo and link-->
-        <a href="https://www.youtube.com" target="_blank">
-          <img
-            src="youtube-play.png"
-            alt="Black and white icon showing a rounded rectangle like a TV screen, with a white play button triangle in the middle—representing the YouTube logo." />YouTube
-        </a>
-        <!--X logo and link-->
-        <a href="https://www.tiktok.com/en/" target="_blank">
-          <img
-            src="tiktok.png"
-            alt="WHite outline of the tiktok logo which looks like a music note" />
-          Twitter
-        </a>
-      </div>
     </footer>
     <script src="script.js"></script>
   </body>
