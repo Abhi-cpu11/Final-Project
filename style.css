@@ -23,7 +23,8 @@ body {
   /* Set default text color to white */
   color: #ffffff;
   /* Use sans-serif font for a clean, futuristic feel */
-  font-family: "Replica", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Arial, Verdana, Tahoma, sans-serif;
+
   /* Set line spacing for readability */
   line-height: 1.4;
   /* Add spacing between letters */
