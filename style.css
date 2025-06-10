@@ -1,4 +1,4 @@
-/*Color family complementrylike newyork colors, where i want to coach . 
+/*Color family complementrylike new york colors, where i want to coach. Blue to seem relaiable and ornage for energy.
 primary: #3DA1FF  
 secondary: #FF9B3D 
 neutrals:
@@ -75,14 +75,14 @@ nav {
 
 .close-btn {
   color: #f58426;
-  position: fixed; /* Important: make it fixed */
+  position: fixed;
   top: 20px;
   left: 30px;
   font-size: 42px;
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 100001; /* Ensure it is above other elements */
+  z-index: 100001;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s ease;
@@ -97,7 +97,6 @@ nav {
   transform: scale(1.2);
 }
 
-/* FULLSCREEN OVERLAY MENU */
 #overlay {
   position: fixed;
   top: 0;
@@ -145,6 +144,7 @@ footer {
   border-top: 3px solid #ffffff;
   width: 100vw;
   margin-left: -20px;
+  color: #3da1ff;
 }
 
 footer .social-media {
@@ -176,9 +176,6 @@ div {
   border-radius: 5px;
 }
 
-.logos-grid {
-}
-
 main {
   /* Create visual separation between cyan border and yellow border */
   margin-top: 13rem;
@@ -187,7 +184,7 @@ main {
   border: 0.5px solid #3da1ff;
 }
 
-/* === SIDE-BY-SIDE CONTAINER === */
+/*
 .left-right-section {
   display: flex;
   flex-wrap: nowrap;
@@ -198,7 +195,7 @@ main {
   box-sizing: border-box;
 }
 
-/* === IMAGE SECTION (LEFT OR RIGHT) === */
+
 .left-image {
   flex: 0 0 40%;
   display: flex;
@@ -213,7 +210,7 @@ main {
   object-fit: cover;
 }
 
-/* === TEXT SECTION (LEFT OR RIGHT) === */
+
 .right-content {
   flex: 1;
   padding: 0 2rem;
@@ -235,3 +232,4 @@ main {
   font-weight: bold;
   margin-right: 0.5rem;
 }
+*/
