@@ -4,148 +4,132 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Athlete</title>
-    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="style.css" />
-
     <style>
-      .video-container {
-        /* Position relative allows absolute positioning inside if needed */
-        position: relative;
-        /* Make width 80% of parent container, max 960px */
-        width: 80%;
-        max-width: 960px;
-        /* Maintain a 16:9 aspect ratio for the video container, addtional feature not leanred in class */
-        aspect-ratio: 16 / 9;
-        /* Center container with 5rem margin on top and bottom */
-        margin: 5rem auto;
-        /* Blue border around the video */
-        border: 4px solid #00e5ff;
-        /* Rounded corners on the container */
-        border-radius: 1rem;
-        /* Soft glowing shadow with partial transparency */
-        -webkit-box-shadow: 0 0 25px #00e5ff88;
-        box-shadow: 0 0 25px #00e5ff88;
-        /* Smooth transition for transform and box-shadow changes on hover */
-        -webkit-transition: -webkit-transform 0.4s ease-in-out,
-          -webkit-box-shadow 0.4s ease-in-out;
-        transition: -webkit-transform 0.4s ease-in-out,
-          -webkit-box-shadow 0.4s ease-in-out;
-        -o-transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-        transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-        transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out,
-          -webkit-transform 0.4s ease-in-out,
-          -webkit-box-shadow 0.4s ease-in-out;
-        /* Prevent content overflow from showing outside rounded corners */
-        overflow: hidden;
-      }
-      /* Hover effect for the video container */
-      .video-container:hover {
-        /* Slight zoom in */
-        -webkit-transform: scale(1.02);
-        -ms-transform: scale(1.02);
-        transform: scale(1.02);
-        /* Intensify glowing shadow on hover */
-        -webkit-box-shadow: 0 0 60px #00e5ffaa;
-        box-shadow: 0 0 60px #00e5ffaa;
-      }
-      /* Style the iframe to fill the container */
-      .video-container iframe {
-        /* Make iframe take full width */
+      .left-half iframe {
         width: 100%;
-        /* Make iframe take full height */
-        height: 100%;
-        /* Remove default iframe border */
-        border: none;
-        /* Display block removes inline spacing */
-        display: block;
-      }
-      .video-link {
-        /* Center the text */
-        text-align: center;
-        /* Add margin for spacing closer to video */
-        margin-top: -3.5rem;
-        /* hard to read with glow*/
-        opacity: 0.9;
-      }
-      .video-link a {
-        /* color yellow */
-        color: #f2ff3d;
+        border-radius: 12px;
+        border: 3px solid #3da1ff;
       }
 
-      .video-link a:hover {
+      .video-caption {
+        margin-top: 1rem;
+        font-size: 1.4rem;
+        color: white;
+        text-align: center;
+      }
+
+      .video-link {
+        color: #3da1ff;
         text-decoration: underline;
+        font-weight: bold;
+      }
+
+      .video-link:hover {
+        color: #ff9b3d;
       }
     </style>
   </head>
-
-  <header>
-    <!-- NAVIGATION BAR  -->
-    <nav id="navbar">
-      <button class="menu-toggle" id="openBtn" onclick="openOverlay()">
-        ☰
-      </button>
-      <div class="logo">COACH KALKAT</div>
-    </nav>
-
-    <!-- FULLSCREEN OVERLAY MENU -->
-    <div id="overlay">
-      <div class="overlay-logo">COACH KALKAT</div>
-      <a href="index.html" onclick="closeOverlay()">MY COACHING PHILOSOPHY</a>
-      <a href="testimonies.html" onclick="closeOverlay()"
-        >RELIABLE TESTIMONIES</a
-      >
-      <a href="the-athlete.html" onclick="closeOverlay()">THE ATHLETE</a>
-      <a href="contact-us.html" onclick="closeOverlay()">CONTACT</a>
-    </div>
-    <button class="close-btn" id="closeBtn" onclick="closeOverlay()">×</button>
-  </header>
   <body>
+    <!-- NAVIGATION BAR  -->
+    <header>
+      <nav id="navbar">
+        <button class="menu-toggle" id="openBtn" onclick="openOverlay()">
+          ☰
+        </button>
+        <div class="logo">COACH KALKAT</div>
+      </nav>
+
+      <!-- FULLSCREEN OVERLAY MENU -->
+      <div id="overlay">
+        <div class="overlay-logo">Choose Your Adventure</div>
+        <a href="index.html" onclick="closeOverlay()">MY COACHING PHILOSOPHY</a>
+        <a href="testimonies.html" onclick="closeOverlay()"
+          >RELIABLE TESTIMONIES</a
+        >
+        <a href="the-athlete.html" onclick="closeOverlay()">THE ATHLETE</a>
+        <a href="contact-us.html" onclick="closeOverlay()">CONTACT</a>
+      </div>
+      <button class="close-btn" id="closeBtn" onclick="closeOverlay()">
+        ×
+      </button>
+    </header>
+
     <main>
-      <!-- Video section container with accessible label -->
-      <section class="video-container">
-        <!-- Embedded YouTube video iframe -->
-        <iframe
-          src="https://youtu.be/evL0CE33WSc?si=8R8p515VdVhdnHRJ"
-          title="Naawi-Oodena Development Overview"
-          allowfullscreen></iframe>
+      <section class="split-section">
+        <div class="left-half">
+          <div class="video-container">
+            <iframe
+              width="450"
+              height="500"
+              src="https://www.youtube.com/embed/evL0CE33WSc?si=A7ft5X8zY4hGv5w4"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+
+            <div class="video-caption">
+              Coach Kalkat basketball clips for U15 year.
+              <a
+                href="https://www.youtube.com/watch?v=evL0CE33WSc"
+                target="_blank"
+                class="video-link"
+                >Click here to watch on YouTube</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="right-half">
+          <h2>Transitioning from Player to Coach</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            facilisi. Sed in lacus ut enim dapibus commodo. In vitae justo
+            porta, blandit risus eu, tincidunt nulla.
+          </p>
+        </div>
       </section>
 
-      <!-- Move the paragraph OUTSIDE of the fixed-height container -->
-      <section>
-        <p class="video-link">
-          <a
-            href="https://youtu.be/evL0CE33WSc?si=8R8p515VdVhdnHRJ"
-            target="_blank">
-            Watch Abhi Kalkat cook his age group.
-          </a>
-        </p>
+      <section class="split-section">
+        <div class="left-half">
+          <h2>Coaching In-Game as a Player</h2>
+          <p>
+            Even as a player, coaching instincts took over during tough
+            moments—helping teammates, reading plays, and leading by example on
+            and off the court. This is where my coaching foundation started.
+          </p>
+        </div>
+        <div class="right-half">
+          <img
+            src="hgI WOLVES.png"
+            alt="Team Victory Celebration OVER ACAIDA SCHOOL." />
+        </div>
       </section>
     </main>
+
+    <!-- FOOTER -->
     <footer>
-      <!-- Social media container -->
       <div class="social-media">
         <div class="social-media-links">
-          <!-- Instagram -->
           <a href="https://www.instagram.com" target="_blank">
             <img src="instagram-new.png" alt="Instagram logo" />
           </a>
-          <!-- YouTube -->
           <a href="https://www.youtube.com" target="_blank">
             <img src="youtube-play.png" alt="YouTube logo" />
           </a>
-          <!-- TikTok -->
           <a href="https://www.tiktok.com/en/" target="_blank">
             <img src="tiktok.png" alt="TikTok logo" />
           </a>
         </div>
       </div>
-      <!-- Quote -->
       <p>
         "Basketball is the most reliable thing in the world. Don't blame, don't
         ask any questions. You bounce, it comes right back. What's there not to
         love?" Uncle Drew.
       </p>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
