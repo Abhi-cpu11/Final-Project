@@ -45,7 +45,6 @@ nav {
   align-items: center;
   padding: 20px 40px;
   z-index: 100000;
-  transition: background-color 0.3s ease;
   background-color: rgba(0, 0, 0, 0.7);
   border-bottom: 3px solid #ffffff;
 }
