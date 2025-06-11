@@ -52,6 +52,7 @@ Date Last Modified: June 13, 2025
         font-weight: bold;
       }
 
+      /*Ballright
       .right-content ul {
         list-style: none;
         padding: 0;
@@ -65,6 +66,10 @@ Date Last Modified: June 13, 2025
         color: #3da1ff;
         font-weight: bold;
         margin-right: 0.5rem;
+      }*/
+
+      .split-section.reverse {
+        flex-direction: row-reverse;
       }
     </style>
   </head>
@@ -103,9 +108,8 @@ Date Last Modified: June 13, 2025
         </div>
       </section>
 
-      <section class="left-right-section">
-        <!-- LEFT: Resume -->
-        <div class="resume-left">
+      <section class="split-section">
+        <div class="left-half">
           <h2>Resume</h2>
           <p>
             <span class="year">2030</span>
@@ -127,7 +131,8 @@ Date Last Modified: June 13, 2025
           </p>
 
           <p>
-            <span class="year">2030</span> <span class="team">Team Toba</span>
+            <span class="year">2030</span>
+            <span class="team">Team Toba</span>
             <span class="role">Assistant Coach – Canada Games</span><br />
             Worked with top Manitoba talent. Contributed to
             <span class="highlight">system planning</span> and
@@ -143,14 +148,16 @@ Date Last Modified: June 13, 2025
           </p>
 
           <p>
-            <span class="year">2030</span> <span class="team">Sea Bears</span>
+            <span class="year">2030</span>
+            <span class="team">Sea Bears</span>
             <span class="role">CEBL Player Development Consultant</span><br />
             Helped bridge younger Canadian players into the
             <span class="highlight">professional circuit</span>.
           </p>
 
           <p>
-            <span class="year">2030</span> <span class="team">UCLA</span>
+            <span class="year">2030</span>
+            <span class="team">UCLA</span>
             <span class="role">Graduate Assistant</span><br />
             Focused on <span class="highlight">film scouting</span> and
             <span class="highlight">guard development</span> in a high-tempo
@@ -158,7 +165,8 @@ Date Last Modified: June 13, 2025
           </p>
 
           <p>
-            <span class="year">2031</span> <span class="team">Auburn</span>
+            <span class="year">2031</span>
+            <span class="team">Auburn</span>
             <span class="role">Assistant Coach – Recruiting</span><br />
             Joined Bruce Pearl’s staff. Helped land a
             <span class="highlight">top-20 recruiting class</span>.
@@ -182,48 +190,35 @@ Date Last Modified: June 13, 2025
           </p>
 
           <p>
-            <span class="year">2036</span> <span class="role">Retired</span
-            ><br />
+            <span class="year">2036</span>
+            <span class="role">Retired</span><br />
             Committed to <span class="highlight">giving back</span> and
             developing the next generation of talent.
           </p>
         </div>
 
-        <!-- RIGHT: Logos -->
-        <div class="coach-logos-section">
-          <h2>Where I've Coached</h2>
-          <div class="logos-grid">
-            <img src="ucla.jpg" alt="Team 1" />
-            <img src="ucla.jpg" alt="Team 2" />
-            <img src="ucla.jpg" alt="Team 3" />
-            <img src="ucla.jpg" alt="Team 4" />
-            <img src="ucla.jpg" alt="Team 5" />
-          </div>
+        <div class="right-half">
+          <img src="resume-photo.jpg" alt="Coach Kalkat Resume Visual" />
         </div>
       </section>
 
-      <section class="left-right-section">
-        <!-- Left: Image -->
-        <div class="left-image">
-          <img src="coach-kalkatt.png" alt="Coach Kalkat" />
+      <section class="split-section reverse">
+        <div class="left-half">
+          <h2>Player-Led Coaching</h2>
+          <p>
+            I coach the same way I used to play — with focus, energy, and
+            attention to the little things that win games. My sessions are
+            designed to challenge players mentally, not just physically. I teach
+            athletes how to think for themselves on the floor, how to adapt in
+            real time, and how to lead others with confidence. It's about more
+            than drills — it's about basketball IQ, emotional control, and
+            presence.
+          </p>
         </div>
-
-        <!-- Right: Coaching Style Description -->
-        <div class="right-content">
-          <h2>My Coaching Style</h2>
-          <ul>
-            <li>
-              <span class="label">Pace Paced:</span> Push the ball in transition
-            </li>
-            <li>
-              <span class="label">Defense:</span> Not playing defense? You're on
-              the bench
-            </li>
-            <li>
-              <span class="label">Put the Ball in the Hoop:</span> 3, middy,
-              layup—anything
-            </li>
-          </ul>
+        <div class="right-half">
+          <img
+            src="player-led-training.jpg"
+            alt="Coach Kalkat explaining on court" />
         </div>
       </section>
     </main>
