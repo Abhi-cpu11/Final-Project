@@ -168,9 +168,6 @@ footer .social-media-links img {
   object-fit: contain;
 }
 
-section {
-}
-
 div {
   /* Padding inside the div */
   padding: 20px;
@@ -179,10 +176,10 @@ div {
 }
 
 main {
-  /* Create visual separation between cyan border and yellow border */
+  /* Create visual separation between cyan border */
   margin-top: 20rem;
   margin-bottom: 8rem;
-  /* Keep your yellow border good use of secondary and to display main information is in the yellow border */
+  /*to display main information is in the yellow border */
   border: 0.5px solid #3da1ff;
 }
 
