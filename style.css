@@ -125,6 +125,8 @@ nav {
   margin-bottom: 2.5rem;
   text-transform: uppercase;
   color: #ff9b3d;
+  margin-top: 8rem;
+  text-align: center;
 }
 
 #overlay a {
@@ -203,10 +205,6 @@ main {
   margin-bottom: 6rem;
 }
 
-.split-section.reverse {
-  flex-direction: row-reverse;
-}
-
 .left-half,
 .right-half {
   flex: 1;
@@ -233,8 +231,7 @@ main {
 }
 
 @media (max-width: 768px) {
-  .split-section,
-  .split-section.reverse {
+  .split-section {
     flex-direction: column;
   }
 }
