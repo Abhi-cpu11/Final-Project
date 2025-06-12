@@ -1,54 +1,78 @@
 <!DOCTYPE html>
+<!-- Declares HTML5 as the document type -->
 <html lang="en">
   <head>
+    <!-- Sets character encoding to UTF-8 for all characters -->
     <meta charset="UTF-8" />
+    <!-- Makes the layout responsive to screen size -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Browser tab title -->
     <title>Testimonies from people Coach Kalkat</title>
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Internal page-specific styles -->
     <style>
+      /* Fullscreen container for the slideshow */
       .testimonial-fullpage {
+        /* Positioned relative so slides can be absolutely placed inside */
         position: relative;
+        /* Takes up full height of the screen */
         height: 100vh;
+        /* Full width across screen */
         width: 100%;
+        /* Prevents scrollbars if slides go out of bounds */
         overflow: hidden;
+        /* Space at the bottom just in case */
         padding-bottom: 4rem;
       }
 
-      /* Base slide styles */
+      /* Base style for every testimonial slide */
       .slide {
+        /* Positioned over each other in the same container */
         position: absolute;
+        /* Anchor to the top */
         top: 0;
+        /* Anchor to the left */
         left: 0;
+        /* Full width and height */
         width: 100%;
         height: 100%;
+        /* Makes the background image cover the space */
         background-size: cover;
         background-position: center;
+        /* Start with no visibility */
         opacity: 0;
+        /* Smooth fade effect between slides */
         -webkit-transition: opacity 1s ease-in-out;
         -o-transition: opacity 1s ease-in-out;
         transition: opacity 1s ease-in-out;
+        /* Slideshow animation runs forever */
         -webkit-animation: fadeLoop 15s infinite;
         animation: fadeLoop 15s infinite;
       }
 
-      /* Different background images */
+      /* Slide 1 image and start time */
       .slide1 {
         background-image: url("testy-pics-cooper.png");
         -webkit-animation-delay: 0s;
         animation-delay: 0s;
       }
+
+      /* Slide 2 image and delay */
       .slide2 {
         background-image: url("testy-pics-angel.png");
         -webkit-animation-delay: 5s;
         animation-delay: 5s;
       }
+
+      /* Slide 3 image and delay */
       .slide3 {
         background-image: url("testy-pics-dylan.png");
         -webkit-animation-delay: 10s;
         animation-delay: 10s;
       }
 
-      /* Animation to show one slide at a time */
+      /* Keyframes for fading the slide in and out */
       @-webkit-keyframes fadeLoop {
         0% {
           opacity: 0;
@@ -84,25 +108,34 @@
         }
       }
 
+      /* Styling for the quote text inside each slide */
       .quote {
+        /* Position quote over the bottom of the slide */
         position: absolute;
         bottom: 10%;
+        /* Center horizontally */
         left: 50%;
         -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
         transform: translateX(-50%);
+        /* Quote text color */
         color: black;
+        /* Font size and weight */
         font-size: 2rem;
-        text-align: center;
-        max-width: 80%;
         font-weight: bold;
+        /* Centered alignment */
+        text-align: center;
+        /* Max width to avoid too long lines */
+        max-width: 80%;
+        /* Hidden by default (syncs with slide fade) */
         opacity: 0;
+        /* Smooth transition */
         -webkit-transition: opacity 1s ease-in-out;
         -o-transition: opacity 1s ease-in-out;
         transition: opacity 1s ease-in-out;
       }
 
-      /* Animate quote in sync with slide */
+      /* Quote inside any slide will also animate */
       .slide1 .quote,
       .slide2 .quote,
       .slide3 .quote {
@@ -110,15 +143,18 @@
         animation: quoteFade 15s infinite;
       }
 
+      /* Delay the quotes to sync with slides */
       .slide2 .quote {
         -webkit-animation-delay: 5s;
         animation-delay: 5s;
       }
+
       .slide3 .quote {
         -webkit-animation-delay: 10s;
         animation-delay: 10s;
       }
 
+      /* Animation for fading quotes just like slides */
       @-webkit-keyframes quoteFade {
         0% {
           opacity: 0;
@@ -156,18 +192,18 @@
       }
     </style>
   </head>
-
   <body>
     <header>
-      <!-- NAVIGATION BAR  -->
+      <!-- Fixed navigation bar at top -->
       <nav id="navbar">
+        <!-- Hamburger icon to open menu -->
         <button class="menu-toggle" id="openBtn" onclick="openOverlay()">
           ☰
         </button>
+        <!-- Site logo/title -->
         <div class="logo-h1">COACH KALKAT</div>
       </nav>
-
-      <!-- FULLSCREEN OVERLAY MENU -->
+      <!-- Fullscreen overlay menu -->
       <div id="overlay">
         <div class="overlay-logo-h2">Choose Your Adventure</div>
         <a href="index.html" onclick="closeOverlay()">HOME</a>
@@ -177,12 +213,14 @@
         <a href="the-athlete.html" onclick="closeOverlay()">THE ATHLETE</a>
         <a href="contact-us.html" onclick="closeOverlay()">CONTACT</a>
       </div>
+      <!-- Close (X) button for overlay -->
       <button class="close-btn" id="closeBtn" onclick="closeOverlay()">
         ×
       </button>
     </header>
 
     <main>
+      <!-- Full-page slideshow section -->
       <section class="testimonial-fullpage">
         <div class="slide slide1">
           <div class="quote">
@@ -204,6 +242,7 @@
         </div>
       </section>
 
+      <!-- Image left, testimonial right -->
       <section class="split-section">
         <div class="left-half">
           <img
@@ -226,6 +265,7 @@
         </div>
       </section>
 
+      <!-- Testimonial section with stats -->
       <section class="split-section">
         <div class="left-half">
           <h2>Stats</h2>
@@ -248,31 +288,29 @@
       </section>
     </main>
 
+    <!-- Footer with social links and quote -->
     <footer>
-      <!-- Social media container -->
       <div class="social-media">
         <div class="social-media-links">
-          <!-- Instagram -->
-          <a href="https://www.instagram.com" target="_blank">
-            <img src="instagram-new.png" alt="Instagram logo" />
-          </a>
-          <!-- YouTube -->
-          <a href="https://www.youtube.com" target="_blank">
-            <img src="youtube-play.png" alt="YouTube logo" />
-          </a>
-          <!-- TikTok -->
-          <a href="https://www.tiktok.com/en/" target="_blank">
-            <img src="tiktok.png" alt="TikTok logo" />
-          </a>
+          <a href="https://www.instagram.com" target="_blank"
+            ><img src="instagram-new.png" alt="Instagram logo"
+          /></a>
+          <a href="https://www.youtube.com" target="_blank"
+            ><img src="youtube-play.png" alt="YouTube logo"
+          /></a>
+          <a href="https://www.tiktok.com/en/" target="_blank"
+            ><img src="tiktok.png" alt="TikTok logo"
+          /></a>
         </div>
       </div>
-      <!-- Quote -->
       <p>
         "Basketball is the most reliable thing in the world. Don't blame, don't
         ask any questions. You bounce, it comes right back. What's there not to
         love?" Uncle Drew.
       </p>
     </footer>
+
+    <!-- JavaScript file for interactivity (menu open/close) -->
     <script src="script.js"></script>
   </body>
 </html>

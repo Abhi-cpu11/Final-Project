@@ -1,139 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Character encoding and responsive design setup -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Coach Kalkat</title>
+
+    <!-- External CSS link -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Internal styles specific to this page -->
     <style>
+      /* Animation from transparent + 40px below to visible + normal Y position */
       @keyframes fadeIn {
+        /* Start state: invisible and moved down */
         from {
+          /* Starts fully transparent */
           opacity: 0;
+
+          /* Moves element down by 40px */
           transform: translateY(40px);
         }
+
+        /* End state: visible and back to position */
         to {
+          /* Ends fully visible */
           opacity: 1;
+
+          /* Brings element back to original position */
           transform: translateY(0);
         }
       }
 
+      /* Container for the contact form and content */
       .contact-section {
+        /* Padding inside the section (top/bottom 6rem, left/right 2rem) */
         padding: 6rem 2rem;
+
+        /* Max width to prevent stretching too wide */
         max-width: 900px;
+
+        /* Horizontally center the section */
         margin: 0 auto;
+
+        /* Default text color for content */
         color: white;
+
+        /* Center text inside this section */
         text-align: center;
+
+        /* Fade-in animation on load */
         animation: fadeIn 1s ease-in-out;
       }
 
+      /* Apply animation to elements inside the contact section */
       .contact-section h2,
       .contact-section p,
       .challenge-text,
       form {
+        /* Delayed fade-in animation */
         animation: fadeIn 1.2s ease-in-out;
       }
 
+      /* Main heading in the contact section */
       .contact-section h2 {
+        /* Large font size */
         font-size: 3.2rem;
+
+        /* Highlighted orange color */
         color: #ff9b3d;
+
+        /* Space below the heading */
         margin-bottom: 1rem;
       }
 
+      /* Paragraphs inside the contact section */
       .contact-section p {
+        /* Space below each paragraph */
         margin-bottom: 2rem;
+
+        /* Text color white for visibility */
         color: #ffffff;
       }
 
+      /* Challenge question before the form */
       .challenge-text-h3 {
+        /* Large bold font */
         font-size: 2.8rem;
+
+        /* Bold text */
         font-weight: bold;
+
+        /* Light blue color */
         color: #3da1ff;
+
+        /* Space above and below the heading */
         margin: 3rem 0 2rem;
+
+        /* Make all letters uppercase */
         text-transform: uppercase;
       }
 
+      /* Style the entire form layout */
       form {
+        /* Stack form elements vertically */
         display: flex;
+
+        /* Vertical spacing between elements */
         flex-direction: column;
+
+        /* Gap between input fields */
         gap: 1.5rem;
+
+        /* Align text to the left inside form */
         text-align: left;
       }
 
+      /* Label text styling for form inputs */
       label {
+        /* Slightly larger font for visibility */
         font-size: 1.9rem;
+
+        /* Make labels bold */
         font-weight: bold;
+
+        /* Use the orange theme color */
         color: #ff9b3d;
       }
 
+      /* Input fields, textareas, and dropdowns */
       input,
       textarea,
       select {
+        /* Inner padding for readability */
         padding: 1rem;
+
+        /* Font size for form input text */
         font-size: 1.4rem;
+
+        /* Remove default borders */
         border: none;
+
+        /* Rounded corners for inputs */
         border-radius: 5px;
+
+        /* Full width fields */
         width: 100%;
+
+        /* Ensures padding is included in total width */
         box-sizing: border-box;
+
+        /* Background color of inputs */
         background-color: white;
+
+        /* Text color inside fields */
         color: black;
       }
 
+      /* Highlight outline when input is focused */
       input:focus,
       textarea:focus,
       select:focus {
+        /* Blue outline when active */
         outline: 2px solid #3da1ff;
       }
 
+      /* Extra settings for the textarea box */
       textarea {
+        /* Allow vertical resizing */
         resize: vertical;
+
+        /* Minimum height for enough writing space */
         min-height: 100px;
       }
 
+      /* Base style for the submit button */
       button {
+        /* Blue background */
         background-color: #3da1ff;
+
+        /* Black text on button */
         color: black;
+
+        /* Padding inside the button */
         padding: 1rem 2rem;
+
+        /* Bold text */
         font-weight: bold;
+
+        /* Remove default border */
         border: none;
+
+        /* Rounded button corners */
         border-radius: 8px;
+
+        /* Mouse pointer on hover */
         cursor: pointer;
       }
 
+      /* Button hover effect */
       .submit-btn:hover {
+        /* Orange background on hover */
         background-color: #ff9b3d;
+
+        /* Keep text color black */
         color: black;
       }
 
+      /* Container for session pricing */
       .pricing-info {
+        /* Space above the pricing box */
         margin-top: 3rem;
+
+        /* Align text to the left */
         text-align: left;
+
+        /* Padding inside the box */
         padding: 2rem;
+
+        /* Rounded box corners */
         border-radius: 10px;
+
+        /* Text color */
         color: white;
+
+        /* Orange border outline */
         border: #ff9b3d 2px solid;
       }
 
+      /* Header inside pricing box */
       .pricing-info h3 {
+        /* Use the orange highlight color */
         color: #ff9b3d;
+
+        /* Space below the header */
         margin-bottom: 1rem;
-        font-family: 2.8rem;
+
+        /* Font size (this is likely a typo in your original code: 'font-family') */
+        font-size: 2.8rem;
       }
 
+      /* Unordered list in pricing section */
       .pricing-info ul {
+        /* Use bullet points */
         list-style: disc;
+
+        /* Indentation for bullets */
         padding-left: 1.5rem;
+
+        /* Remove default top/bottom margin */
         margin: 0;
       }
 
+      /* Style specific keywords like session types */
       .team {
+        /* Orange highlight color */
         color: #ff9b3d;
+
+        /* Bold font weight */
         font-weight: bold;
       }
     </style>
   </head>
   <body>
+    <!-- Page Header & Navigation -->
     <header>
-      <!-- NAVIGATION BAR  -->
+      <!-- Top nav bar with logo and menu toggle -->
       <nav id="navbar">
         <button class="menu-toggle" id="openBtn" onclick="openOverlay()">
           ☰
@@ -141,7 +273,7 @@
         <div class="logo-h1">COACH KALKAT</div>
       </nav>
 
-      <!-- FULLSCREEN OVERLAY MENU -->
+      <!-- Fullscreen overlay menu -->
       <div id="overlay">
         <div class="overlay-logo-h2">Choose Your Adventure</div>
         <a href="index.html" onclick="closeOverlay()">HOME</a>
@@ -151,13 +283,17 @@
         <a href="the-athlete.html" onclick="closeOverlay()">THE ATHLETE</a>
         <a href="contact-us.html" onclick="closeOverlay()">CONTACT</a>
       </div>
+
+      <!-- Close button for menu -->
       <button class="close-btn" id="closeBtn" onclick="closeOverlay()">
         ×
       </button>
     </header>
 
+    <!-- Main content -->
     <main>
       <section class="contact-section">
+        <!-- Section heading and intro -->
         <h2>Ready to Take the Next Step?</h2>
         <p>
           Are you a driven athlete who wants more from the game? I'm currently
@@ -174,10 +310,12 @@
           hear from you.
         </p>
 
+        <!-- Motivational prompt -->
         <div class="challenge-text-h3">
           Are you up for the challenge to be coached by me?
         </div>
 
+        <!-- Contact form -->
         <form action="contact-us.html" method="GET">
           <label for="name">Full Legal Name</label>
           <input
@@ -229,9 +367,11 @@
             placeholder="Tell me about yourself and what you think I should know. Talk about your basketball journey, your goals, and what you bring to the court."
             required></textarea>
 
+          <!-- Submit button -->
           <button type="submit" class="submit-btn">Submit Application</button>
         </form>
 
+        <!-- Pricing information -->
         <div class="pricing-info">
           <h3>Session Rates & Info</h3>
           <ul>
@@ -249,9 +389,11 @@
       </section>
     </main>
 
+    <!-- Footer with social links and quote -->
     <footer>
       <div class="social-media">
         <div class="social-media-links">
+          <!-- Social icons -->
           <a href="https://www.instagram.com" target="_blank">
             <img src="instagram-new.png" alt="Instagram logo" />
           </a>
@@ -263,13 +405,16 @@
           </a>
         </div>
       </div>
+
+      <!-- Inspirational quote -->
       <p>
         "Basketball is the most reliable thing in the world. Don't blame, don't
         ask any questions. You bounce, it comes right back. What's there not to
-        love?" Uncle Drew.
+        love?" — Uncle Drew.
       </p>
     </footer>
 
+    <!-- JavaScript functionality -->
     <script src="script.js"></script>
   </body>
 </html>
