@@ -13,7 +13,7 @@ Date Last Modified: June 13, 2025
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My PHILOSOPHY</title>
+    <title>Coach Kalkat Home</title>
     <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="style.css" />
 
@@ -39,6 +39,7 @@ Date Last Modified: June 13, 2025
         position: absolute;
         top: 50%;
         left: 50%;
+        transform: translate(-50%, -50%);
         z-index: 5;
         text-align: center;
         padding: 0 2rem;
@@ -49,17 +50,50 @@ Date Last Modified: June 13, 2025
         color: #ff9b3d;
         font-size: 2.4rem;
         font-weight: bold;
+        text-align: center;
       }
 
-      /*.label {
+      .label {
         color: #3da1ff;
         font-weight: bold;
         margin-right: 0.5rem;
-      }*/
+      }
 
       .split-section.reverse {
         flex-direction: row-reverse;
       }
+
+      .team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 2rem;
+  column-gap: 4rem;
+  padding: 2rem;
+  justify-items: stretch;
+  align-items: stretch;
+  height: 100%;
+}
+
+.team-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.team-grid img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    row-gap: 8rem;
+  }
+}
+
+
     </style>
   </head>
   <body>
@@ -90,7 +124,7 @@ Date Last Modified: June 13, 2025
       <section class="coach-k-pic">
         <img
           src="coach-kalkatt.png"
-          alt="Coach Kalkat"
+          alt="Coach Kalkat a man with a buzz cut"
           class="coach-k-pic-image" />
         <div id="coach-k-pic-content">
           <p>"This is not for everyone" - Coach Kalkat</p>
@@ -110,7 +144,7 @@ Date Last Modified: June 13, 2025
           </p>
 
           <p>
-            <span class="year">2030</span>
+            <span class="year">2031</span>
             <span class="team">Junior Bisons</span>
             <span class="role">U17 & College Team</span><br />
             Started with U17 and was promoted to the college coaching staff.
@@ -120,7 +154,7 @@ Date Last Modified: June 13, 2025
           </p>
 
           <p>
-            <span class="year">2030</span>
+            <span class="year">2032</span>
             <span class="team">Team Toba</span>
             <span class="role">Assistant Coach – Canada Games</span><br />
             Worked with top Manitoba talent. Contributed to
@@ -129,7 +163,7 @@ Date Last Modified: June 13, 2025
           </p>
 
           <p>
-            <span class="year">2030</span>
+            <span class="year">2034</span>
             <span class="team">UPlay Canada EYBL U17</span>
             <span class="role">Assistant Coach</span><br />
             Joined one of Canada's top AAU programs. Qualified for
@@ -137,7 +171,7 @@ Date Last Modified: June 13, 2025
           </p>
 
           <p>
-            <span class="year">2030</span>
+            <span class="year">2035</span>
             <span class="team">Sea Bears</span>
             <span class="role">CEBL Player Development Consultant</span><br />
             Helped bridge younger Canadian players into the
@@ -145,7 +179,7 @@ Date Last Modified: June 13, 2025
           </p>
 
           <p>
-            <span class="year">2030</span>
+            <span class="year">2036</span>
             <span class="team">UCLA</span>
             <span class="role">Graduate Assistant</span><br />
             Focused on <span class="highlight">film scouting</span> and
@@ -154,7 +188,7 @@ Date Last Modified: June 13, 2025
           </p>
 
           <p>
-            <span class="year">2031</span>
+            <span class="year">2038</span>
             <span class="team">Auburn</span>
             <span class="role">Assistant Coach – Recruiting</span><br />
             Joined Bruce Pearl’s staff. Helped land a
@@ -162,7 +196,7 @@ Date Last Modified: June 13, 2025
           </p>
 
           <p>
-            <span class="year">2032</span>
+            <span class="year">2039</span>
             <span class="team">University of Florida</span>
             <span class="role">Associate Coach</span><br />
             Led <span class="highlight">defensive strategy</span> and
@@ -171,7 +205,7 @@ Date Last Modified: June 13, 2025
           </p>
 
           <p>
-            <span class="year">2034</span>
+            <span class="year">2042</span>
             <span class="team">New York Knicks</span>
             <span class="role">Assistant Coach</span><br />
             Joined <span class="highlight">Charen Gambir’s staff</span> to
@@ -179,7 +213,7 @@ Date Last Modified: June 13, 2025
           </p>
 
           <p>
-            <span class="year">2036</span>
+            <span class="year">2044</span>
             <span class="role">Retired</span><br />
             Committed to <span class="highlight">giving back</span> and
             developing the next generation of talent.
@@ -187,13 +221,18 @@ Date Last Modified: June 13, 2025
         </div>
 
         <div class="right-half">
-          <img src="resume-photo.jpg" alt="Coach Kalkat Resume Visual" />
+          <div class="team-grid">
+            <img src="ucla.jpg" alt="UCLA" />
+            <img src="ucla.jpg" alt="Team 2" />
+            <img src="ucla.jpg" alt="Team 3" />
+            <img src="ucla.jpg" alt="Team 4" />
+          </div>
         </div>
-      </section>
+        
 
       <section class="split-section reverse">
         <div class="left-half">
-          <h2>Player-Led Coaching</h2>
+          <h2>Coaching Style</h2>
           <p>
             <ul>
               <li>
@@ -203,7 +242,7 @@ Date Last Modified: June 13, 2025
                 <span class="label">Defense:</span> Not playing defense? You're running 20 manmakers.
               </li>
               <li>
-                <span class="label">Put the Ball in the Hoop:</span> 3, middy,
+                <span class="label">Put the Ball in the Hoop:</span> 3, mid-range,
                 layup, anything.
               </li>
             </ul>
@@ -211,8 +250,9 @@ Date Last Modified: June 13, 2025
         </div>
         <div class="right-half">
           <img
-            src="player-led-training.jpg"
-            alt="Coach Kalkat explaining on court" />
+            src="coach--yelling.png"
+            alt="Coach Kalkat explaining on court" 
+            class="left-half img"/>
         </div>
       </section>
     </main>
