@@ -9,113 +9,202 @@ School: Pembina Trails Collegiate
 Date Last Modified: June 13, 2025 
 -->
 <!DOCTYPE html>
+<!-- Tells browser this is an HTML5 page -->
 <html lang="en">
   <head>
+    <!-- Sets character encoding -->
     <meta charset="UTF-8" />
+    <!-- Makes site mobile responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title shown on browser tab -->
     <title>Coach Kalkat Home</title>
-    <!-- Link to external stylesheet -->
+
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="style.css" />
 
     <style>
+      /* Section that holds the full-screen image of Coach */
       .coach-k-pic {
+        /* Allows child elements to be absolutely positioned relative to this */
         position: relative;
+        /* Takes full width of the screen */
         width: 100%;
-        height: 100vh; /* Full screen */
+        /* Takes full height of the viewport */
+        height: 100vh;
+        /* Hides anything that overflows out of the box */
         overflow: hidden;
       }
 
+      /* The actual image inside the hero section */
       .coach-k-pic-image {
+        /* Stick the image to the top edge */
         position: absolute;
+        /* Stick the image to the left edge */
         top: 0;
         left: 0;
+        /* Make image stretch across the full width */
         width: 100%;
+        /* Make image stretch to full height */
         height: 100%;
+        /* Fallback for older Opera — keeps image proportions */
+        -o-object-fit: cover;
+        /* Covers the container fully without distortion */
         object-fit: cover;
+        /* Put it behind the text layer */
         z-index: 4;
       }
 
+      /* This is the quote box that sits centered on top of the image */
       #coach-k-pic-content {
+        /* Allows positioning inside the container */
         position: absolute;
+        /* Center vertically */
         top: 50%;
+        /* Center horizontally */
         left: 50%;
+        /* Shift it back by half so it's truly centered */
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
+        /* Puts it above the image */
         z-index: 5;
+        /* Center the text inside */
         text-align: center;
+        /* Padding on left and right for mobile spacing */
         padding: 0 2rem;
       }
 
+      /* Style for the quote text itself */
       #coach-k-pic-content p {
+        /* Adds a little space above the text */
         margin-top: 1rem;
+        /* Orange highlight color for the quote */
         color: #ff9b3d;
+        /* Make the font size large for visibility */
         font-size: 2.4rem;
+        /* Bold for emphasis */
         font-weight: bold;
+        /* Keep it centered */
         text-align: center;
       }
 
+      /* This flips the section layout so the image shows first on the left */
       .split-section.reverse {
+        /* Horizontal layout direction */
+        -webkit-box-orient: horizontal;
+        /* Reverses the row so image and text switch sides */
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
         flex-direction: row-reverse;
       }
 
+      /* Grid container for team logos (2 per row) */
       .team-grid {
+        /* Old IE fallback */
+        display: -ms-grid;
+        /* Modern CSS grid */
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 4rem;
-        column-gap: 4rem;
-        padding: 2rem;
-        justify-items: stretch;
-        align-items: stretch;
-        height: 100%;
+        /* Defines columns for IE fallback */
+        -ms-grid-columns: minmax(0, 1fr) 2rem minmax(0, 1fr);
+        /* Defines 2 flexible columns for all screens */
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        /* Adds space between the items */
+        gap: 2rem;
+        /* Centers each grid item horizontally */
+        justify-items: center;
+        /* Centers items vertically */
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
       }
 
+      /* Each team logo image styling */
       .team-grid img {
+        /* Fill width of container */
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 12px;
+        /* Don’t stretch past natural size */
+        max-width: 100%;
+        /* Keep a fixed aspect ratio (like 3:2) */
+        aspect-ratio: 3 / 2;
+        /* Fallback to make sure image fits well */
+        -o-object-fit: contain;
+        /* Keeps image inside container without cropping */
+        object-fit: contain;
+        /* Padding around the image */
+        padding: 1rem;
+        /* Rounded corners for modern look */
+        border-radius: 10px;
+        /* Smooth zoom effect (Webkit) */
+        -webkit-transition: -webkit-transform 0.3s ease;
+        /* Smooth zoom effect (Webkit standard) */
+        transition: -webkit-transform 0.3s ease;
+        /* Smooth zoom effect (Opera/legacy support) */
+        -o-transition: transform 0.3s ease;
+        /* Smooth zoom effect (normal) */
         transition: transform 0.3s ease;
+        /* Covers both transform types for compatibility */
+        transition: transform 0.3s ease, -webkit-transform 0.3s ease;
       }
 
+      /* Zoom-in animation when hovering over a team image */
       .team-grid img:hover {
+        /* Webkit scale on hover */
+        -webkit-transform: scale(1.05);
+        /* Legacy MS scale */
+        -ms-transform: scale(1.05);
+        /* Actual scale effect */
         transform: scale(1.05);
       }
 
-      @media (max-width: 768px) {
+      /* Media query for smaller screens */
+      @media (max-width: 1287px) {
+        /* Switch to single column layout on small screens */
         .team-grid {
+          -ms-grid-columns: 1fr;
           grid-template-columns: 1fr;
-          row-gap: 4rem;
+        }
+
+        /* Shrinks images to fit better on phones */
+        .team-grid img {
+          max-width: 220px;
+          /* Centers the smaller images */
+          margin: 0 auto;
         }
       }
 
-      .team-grid img {
-        max-width: 400px;
-        height: 300px;
-      }
-
+      /* Line spacing for the resume text */
       .resume {
         line-height: 1.6;
       }
 
+      /* Styling for year labels in resume */
       .year {
+        /* Bold to stand out */
         font-weight: bold;
+        /* Accent blue color */
         color: #3da1ff;
+        /* Slight spacing between letters */
         letter-spacing: 1.1px;
       }
     </style>
   </head>
   <body>
     <header>
-      <!-- NAVIGATION BAR  -->
+      <!-- Top fixed NAVBAR with logo and hamburger menu -->
       <nav id="navbar">
+        <!-- Hamburger icon for mobile menu -->
         <button class="menu-toggle" id="openBtn" onclick="openOverlay()">
           ☰
         </button>
+        <!-- Centered site name/logo -->
         <div class="logo-h1">COACH KALKAT</div>
       </nav>
 
-      <!-- FULLSCREEN OVERLAY MENU -->
+      <!-- Fullscreen overlay menu -->
       <div id="overlay">
+        <!-- Title in the menu -->
         <div class="overlay-logo-h2">Choose Your Adventure</div>
+        <!-- Menu links -->
         <a href="index.html" onclick="closeOverlay()">HOME</a>
         <a href="testimonies.html" onclick="closeOverlay()"
           >RELIABLE TESTIMONIES</a
@@ -123,25 +212,33 @@ Date Last Modified: June 13, 2025
         <a href="the-athlete.html" onclick="closeOverlay()">THE ATHLETE</a>
         <a href="contact-us.html" onclick="closeOverlay()">CONTACT</a>
       </div>
+
+      <!-- X button to close the overlay menu -->
       <button class="close-btn" id="closeBtn" onclick="closeOverlay()">
         ×
       </button>
     </header>
+
     <main>
+      <!-- Hero section with full image and quote -->
       <section class="coach-k-pic">
+        <!-- Main hero image -->
         <img
           src="coach-kalkatt.png"
           alt="Coach Kalkat a man with a buzz cut"
           class="coach-k-pic-image" />
+        <!-- Quote from Coach Kalkat -->
         <div id="coach-k-pic-content">
           <p>"This is not for everyone" - Coach Kalkat</p>
         </div>
       </section>
 
+      <!-- Resume section with team logos -->
       <section class="split-section">
         <div class="left-half">
           <h2>Resume</h2>
           <div class="resume">
+            <!-- One paragraph per job experience -->
             <p>
               <span class="year">2030</span>
               <span class="team">PTC Academy</span>
@@ -219,28 +316,31 @@ Date Last Modified: June 13, 2025
           </div>
         </div>
 
+        <!-- Grid of team images beside resume -->
         <div class="right-half">
           <div class="team-grid">
-            <img src="uclalogo.png" alt="UCLA" />
-            <img src="Sea Bears.png" alt="Team 2" />
-            <img src="Auburn.jpg" alt="Team 3" />
-            <img src="New-York-Knicks-Logo-paint-by-number.jpg" alt="Team 4" />
+            <img src="AUBURN.png" alt="UCLA" />
+            <img src="sea-bear.png" alt="Team 2" />
+            <img src="NYC.png" alt="Team 3" />
+            <img src="Bisions.png" alt="Team 4" />
           </div>
         </div>
       </section>
 
+      <!-- Coaching Style split section -->
       <section class="split-section reverse">
         <div class="left-half">
           <h2>Coaching Style</h2>
           <p>
             I coach with pace. We push the ball in transition and don’t waste
             time. On defense, if you’re not playing hard, you're running 20
-            manmakers. Offensively, it’s about putting the ball in the hoop
-            whether it’s a three, a mid-range jumper or a layup. Whatever gets
-            it done.
+            manmakers. Offensively, it’s about putting the ball in the
+            hoop—whether it’s a three, a mid-range jumper or a layup. Whatever
+            gets it done.
           </p>
         </div>
 
+        <!-- Image showing coaching energy -->
         <div class="right-half">
           <img
             src="coach--yelling.png"
@@ -251,30 +351,33 @@ Date Last Modified: June 13, 2025
     </main>
 
     <footer>
-      <!-- Social media container -->
+      <!-- Container for social media icons -->
       <div class="social-media">
         <div class="social-media-links">
-          <!-- Instagram -->
+          <!-- Instagram icon and link -->
           <a href="https://www.instagram.com" target="_blank">
             <img src="instagram-new.png" alt="Instagram logo" />
           </a>
-          <!-- YouTube -->
+          <!-- YouTube icon and link -->
           <a href="https://www.youtube.com" target="_blank">
             <img src="youtube-play.png" alt="YouTube logo" />
           </a>
-          <!-- TikTok -->
+          <!-- TikTok icon and link -->
           <a href="https://www.tiktok.com/en/" target="_blank">
             <img src="tiktok.png" alt="TikTok logo" />
           </a>
         </div>
       </div>
-      <!-- Quote -->
+
+      <!-- Footer quote -->
       <p>
         "Basketball is the most reliable thing in the world. Don't blame, don't
         ask any questions. You bounce, it comes right back. What's there not to
-        love?" Uncle Drew.
+        love?" — Uncle Drew
       </p>
     </footer>
+
+    <!-- Connect JS file at the bottom for functionality -->
     <script src="script.js"></script>
   </body>
 </html>

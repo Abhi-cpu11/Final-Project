@@ -1,233 +1,395 @@
-/*Color family complementrylike new york colors, where i want to coach. Blue to seem relaiable and ornage for energy.
+/*Color family complementry like new york colors, where I coached. Blue to seem relaiable and ornage for energy.
 primary: #3DA1FF  
 secondary: #FF9B3D 
 neutrals:
-white for text, black background 8*/
+white for text, black background */
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/* Vendor prefixes are used for multi-browser purposes */
+
 html {
-  /* Enable smooth scrolling for anchor links */
+  /* Smooth scroll effect when jumping to anchor links */
   scroll-behavior: smooth;
+  /* Sets 1rem = 10px for easy math */
   font-size: 62.5%;
 }
 
 * {
-  /* Reset margins, padding, and use border-box for all elements */
+  /* Reset default margin */
   margin: 0;
+  /* Reset default padding */
   padding: 0;
+  /* Makes sure padding/border don’t mess with sizing */
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 body {
-  /* Set background to black for contrast and a modern look */
+  /* Set background to pure black for clean, bold style */
   background-color: #000000;
-  /* Set default text color to white */
+  /* White text for high contrast on black */
   color: #ffffff;
-  /* Use sans-serif websafe font for a sporty apperance */
+  /* Sporty and simple sans-serif font */
   font-family: Tahoma, sans-serif;
-  /* Set line spacing for readability */
+  /* Spaced out lines for better readability */
   line-height: 1.4;
-  /* Add spacing between letters */
+  /* Slight spacing between letters for clean feel */
   letter-spacing: 1px;
-  /* Add spacing between words */
+  /* Adds space between words */
   word-spacing: 0.9px;
-  /* Add margin to left and right like said in wireframe */
+  /* Side margins like in the wireframe */
   margin: 0 20px;
+  /* Main base font size for body */
   font-size: 1.6rem;
 }
 
 nav {
+  /* Keeps navbar stuck to the top */
   position: fixed;
+  /* Align to top edge */
   top: 0;
+  /* Align to left edge */
   left: 0;
+  /* Full width nav */
   width: 100%;
+  /* Flex layout for horizontal layout */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  /* Center nav content */
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  /* Vertically center items */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  /* Padding around navbar content */
   padding: 20px 40px;
+  /* Keeps nav above all other content */
   z-index: 100000;
+  /* See-through black bg for style */
   background-color: rgba(0, 0, 0, 0.7);
+  /* White line at bottom of nav */
   border-bottom: 3px solid #ffffff;
 }
 
 .logo-h1 {
+  /* Big bold logo text */
   font-size: 4rem;
+  /* Extra bold */
   font-weight: bold;
+  /* Center the text */
   text-align: center;
+  /* Takes up extra space */
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
+  /* Accent blue color */
   color: #3da1ff;
 }
 
 .menu-toggle,
 .close-btn {
+  /* Position button on top left */
   position: absolute;
+  /* Space from left */
   left: 30px;
+  /* Big clickable button */
   font-size: 42px;
+  /* No background */
   background: none;
+  /* No border */
   border: none;
+  /* Cursor becomes pointer on hover */
   cursor: pointer;
 }
 
 .menu-toggle {
+  /* Default menu icon is white */
   color: white;
+  /* Always visible */
   display: block;
 }
 
 .close-btn {
+  /* Use orange for close icon */
   color: #f58426;
+  /* Lock to viewport */
   position: fixed;
+  /* Distance from top */
   top: 20px;
+  /* Align left */
   left: 30px;
+  /* Same large size */
   font-size: 42px;
+  /* No background */
   background: none;
+  /* No border */
   border: none;
+  /* Pointer cursor on hover */
   cursor: pointer;
+  /* High z-index to show above nav */
   z-index: 100001;
+  /* Hidden by default */
   opacity: 0;
+  /* Can't be clicked until shown */
   pointer-events: none;
+  /* Smooth fade-in/out */
+  -webkit-transition: opacity 0.4s ease;
+  -o-transition: opacity 0.4s ease;
   transition: opacity 0.4s ease;
 }
 
 .close-btn.visible {
+  /* Make it show up */
   opacity: 1;
+  /* Make it clickable */
   pointer-events: auto;
 }
 
 .close-btn:hover {
+  /* Slight zoom on hover */
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
 #overlay {
+  /* Fullscreen overlay menu */
   position: fixed;
+  /* Start at top */
   top: 0;
+  /* Start at left */
   left: 0;
+  /* Full width */
   width: 100vw;
+  /* Full height */
   height: 100vh;
+  /* Flex layout */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  /* Stack items vertically */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  /* Center horizontally */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  /* Center vertically */
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  /* High z-index to go over everything */
   z-index: 13;
+  /* Hidden by default */
   opacity: 0;
+  /* No click until visible */
   pointer-events: none;
+  /* Transparent black background */
   background-color: rgba(0, 0, 0, 0.85);
 }
 
 #overlay.fade-in {
+  /* Show and fade in */
   opacity: 1;
+  /* Make it clickable */
   pointer-events: all;
+  /* Smooth fade */
+  -webkit-transition: opacity 1.2s ease;
+  -o-transition: opacity 1.2s ease;
   transition: opacity 1.2s ease;
 }
 
 .overlay-logo-h2 {
+  /* Heading for overlay screen */
   font-size: 3.2rem;
+  /* Bold it */
   font-weight: bold;
+  /* Space below */
   margin-bottom: 2.5rem;
+  /* Uppercase styling */
   text-transform: uppercase;
+  /* Orange accent color */
   color: #ff9b3d;
+  /* Push it down */
   margin-top: 8rem;
+  /* Center align */
   text-align: center;
 }
 
 #overlay a {
+  /* Overlay nav links */
   font-size: 2.5rem;
+  /* Remove underline */
   text-decoration: none;
+  /* White by default */
   color: white;
+  /* Add vertical spacing */
   margin: 15px 0;
+  /* Smooth hover effect */
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
+  /* Uppercase text */
   text-transform: uppercase;
 }
 
 #overlay a:hover {
+  /* Change link color on hover */
   color: #f58426;
 }
 
 footer {
+  /* Center everything */
   text-align: center;
+  /* White line above footer */
   border-top: 3px solid #ffffff;
+  /* Full screen width */
   width: 100vw;
+  /* Cancel body side margin */
   margin-left: -20px;
+  /* Blue accent text */
   color: #3da1ff;
 }
 
 footer .social-media {
+  /* Flex layout to center */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 footer .social-media-links {
+  /* Social icons row with spacing */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 1.2rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
 footer .social-media-links img {
+  /* Icon sizing */
   width: 100px;
   height: 100px;
+  /* Keep proper shape */
+  -o-object-fit: contain;
   object-fit: contain;
 }
 
 div {
-  /* Padding inside the div */
+  /* Padding inside divs */
   padding: 20px;
-  /* Rounded corners */
+  /* Slight rounded corners */
   border-radius: 5px;
 }
 
 main {
-  /* Create visual separation between cyan border */
+  /* Big gap below navbar */
   margin-top: 20rem;
+  /* Space before footer */
   margin-bottom: 8rem;
-  /*to display main information is in the yellow border */
+  /* Blue border around main */
   border: 0.5px solid #3da1ff;
 }
 
 .role {
+  /* Italic font for roles */
   font-style: italic;
 }
 
 .team {
+  /* Orange and bold for team names */
   color: #ff9b3d;
   font-weight: bold;
 }
 
 .split-section {
+  /* Flex layout for left/right layout */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  /* Allow wrapping if needed */
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  /* Add space between blocks */
   gap: 4rem;
+  /* Vertically center */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  /* Space them apart evenly */
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  /* Top and bottom spacing */
   margin-bottom: 6rem;
+  margin-top: 4rem;
 }
 
 .left-half,
 .right-half {
+  /* Each half takes equal space */
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
+  /* Minimum width for each side */
   min-width: 300px;
 }
 
 .left-half img,
 .right-half img {
+  /* Full width images */
   width: 100%;
+  /* Round image corners */
   border-radius: 12px;
+  /* Add blue border */
   border: 3px solid #3da1ff;
 }
 
 .right-half p,
 .left-half p {
+  /* White text color inside content */
   color: white;
 }
 
 .right-half h2,
 .left-half h2 {
+  /* Section titles in split layout */
   font-size: 3.2rem;
+  /* Orange titles */
   color: #ff9b3d;
+  /* Space below */
   margin-bottom: 1.5rem;
 }
 
 @media (max-width: 768px) {
+  /* When screen is smaller (like phones) */
   .split-section {
+    /* Stack items vertically */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 }

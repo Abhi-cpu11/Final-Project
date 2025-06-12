@@ -1,47 +1,67 @@
 <!DOCTYPE html>
+<!-- Declares this is an HTML5 document -->
 <html lang="en">
   <head>
+    <!-- Sets the character encoding to UTF-8 -->
     <meta charset="UTF-8" />
+    <!-- Makes layout responsive on phones and tablets -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title of the page in browser tab -->
     <title>The Athlete Coach Kalkat</title>
+    <!-- Link to main external stylesheet -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Internal page-specific styles -->
     <style>
+      /* Style the video iframe inside the left column */
       .left-half iframe {
+        /* Video takes up full width of its container */
         width: 100%;
+        /* Smooth rounded corners */
         border-radius: 12px;
+        /* Blue border to match theme */
         border: 3px solid #3da1ff;
       }
-
+      /* Text under the video */
       .video-caption {
+        /* Space above the text */
         margin-top: 1rem;
+        /* White for contrast on black bg */
         color: white;
+        /* Center the caption */
         text-align: center;
       }
-
+      /* Link to YouTube video */
       .video-link {
+        /* Blue text like rest of site */
         color: #3da1ff;
+        /* Underline so users know it's a link */
         text-decoration: underline;
+        /* Bold for emphasis */
         font-weight: bold;
       }
-
+      /* Hover effect for link */
       .video-link:hover {
+        /* Change to orange on hover */
         color: #ff9b3d;
       }
     </style>
   </head>
   <body>
     <header>
-      <!-- NAVIGATION BAR  -->
+      <!-- Main nav bar fixed at top -->
       <nav id="navbar">
+        <!-- ☰ icon opens overlay menu -->
         <button class="menu-toggle" id="openBtn" onclick="openOverlay()">
           ☰
         </button>
+        <!-- Centered logo/title -->
         <div class="logo-h1">COACH KALKAT</div>
       </nav>
-
-      <!-- FULLSCREEN OVERLAY MENU -->
+      <!-- Fullscreen menu overlay -->
       <div id="overlay">
+        <!-- Overlay heading text -->
         <div class="overlay-logo-h2">Choose Your Adventure</div>
+        <!-- Navigation links inside overlay -->
         <a href="index.html" onclick="closeOverlay()">HOME</a>
         <a href="testimonies.html" onclick="closeOverlay()"
           >RELIABLE TESTIMONIES</a
@@ -49,15 +69,19 @@
         <a href="the-athlete.html" onclick="closeOverlay()">THE ATHLETE</a>
         <a href="contact-us.html" onclick="closeOverlay()">CONTACT</a>
       </div>
+      <!-- X button to close the menu -->
       <button class="close-btn" id="closeBtn" onclick="closeOverlay()">
         ×
       </button>
     </header>
 
     <main>
+      <!-- Section with YouTube video and story -->
       <section class="split-section">
+        <!-- Left side: embedded video -->
         <div class="left-half">
           <div class="video-container">
+            <!-- YouTube embedded video -->
             <iframe
               width="450"
               height="500"
@@ -67,7 +91,7 @@
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen></iframe>
-
+            <!-- Caption and link to YouTube -->
             <div class="video-caption">
               Coach Kalkat basketball clips for U15 year.
               <a
@@ -79,7 +103,7 @@
             </div>
           </div>
         </div>
-
+        <!-- Right side: player-to-coach journey -->
         <div class="right-half">
           <h2>Transitioning from Player to Coach</h2>
           <p>
@@ -96,13 +120,15 @@
         </div>
       </section>
 
+      <!-- Section on basketball IQ and studying film -->
       <section class="split-section">
+        <!-- Left: story about studying the game -->
         <div class="left-half">
           <h2>Student of the Game</h2>
           <p>
             Even when I was playing, I spent more time studying the game than
             most people around me. After practice, I would go home and watch NBA
-            or college games, not just for fun, but to actually learn something.
+            or college games—not just for fun, but to actually learn something.
             I would pause the video, rewind plays, and break down the small
             things. I looked at how defenders rotated when they were off the
             ball, how timing affected spacing, or how a jab step could shift the
@@ -116,6 +142,7 @@
             and why every detail matters.
           </p>
         </div>
+        <!-- Right: team victory image -->
         <div class="right-half">
           <img
             src="hgI WOLVES.png"
@@ -124,28 +151,34 @@
       </section>
     </main>
 
-    <!-- FOOTER -->
+    <!-- Footer section with social icons and quote -->
     <footer>
+      <!-- Row of social media icons -->
       <div class="social-media">
         <div class="social-media-links">
+          <!-- Instagram icon -->
           <a href="https://www.instagram.com" target="_blank">
             <img src="instagram-new.png" alt="Instagram logo" />
           </a>
+          <!-- YouTube icon -->
           <a href="https://www.youtube.com" target="_blank">
             <img src="youtube-play.png" alt="YouTube logo" />
           </a>
+          <!-- TikTok icon -->
           <a href="https://www.tiktok.com/en/" target="_blank">
             <img src="tiktok.png" alt="TikTok logo" />
           </a>
         </div>
       </div>
+      <!-- Motivational basketball quote -->
       <p>
         "Basketball is the most reliable thing in the world. Don't blame, don't
         ask any questions. You bounce, it comes right back. What's there not to
-        love?" Uncle Drew.
+        love?" — Uncle Drew.
       </p>
     </footer>
 
+    <!-- Script that handles menu open/close -->
     <script src="script.js"></script>
   </body>
 </html>
