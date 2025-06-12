@@ -3,14 +3,6 @@ primary: #3DA1FF
 secondary: #FF9B3D 
 neutrals:
 white for text, black background */
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
-/* Vendor prefixes are used for multi-browser purposes */
 
 html {
   /* Smooth scroll effect when jumping to anchor links */
