@@ -53,47 +53,54 @@ Date Last Modified: June 13, 2025
         text-align: center;
       }
 
-      .label {
-        color: #3da1ff;
-        font-weight: bold;
-        margin-right: 0.5rem;
-      }
-
       .split-section.reverse {
         flex-direction: row-reverse;
       }
 
       .team-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  row-gap: 2rem;
-  column-gap: 4rem;
-  padding: 2rem;
-  justify-items: stretch;
-  align-items: stretch;
-  height: 100%;
-}
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 4rem;
+        column-gap: 4rem;
+        padding: 2rem;
+        justify-items: stretch;
+        align-items: stretch;
+        height: 100%;
+      }
 
-.team-grid img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
-}
+      .team-grid img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+        transition: transform 0.3s ease;
+      }
 
-.team-grid img:hover {
-  transform: scale(1.05);
-}
+      .team-grid img:hover {
+        transform: scale(1.05);
+      }
 
-@media (max-width: 768px) {
-  .team-grid {
-    grid-template-columns: 1fr;
-    row-gap: 8rem;
-  }
-}
+      @media (max-width: 768px) {
+        .team-grid {
+          grid-template-columns: 1fr;
+          row-gap: 4rem;
+        }
+      }
 
+      .team-grid img {
+        max-width: 400px;
+        height: 300px;
+      }
 
+      .resume {
+        line-height: 1.6;
+      }
+
+      .year {
+        font-weight: bold;
+        color: #3da1ff;
+        letter-spacing: 1.1px;
+      }
     </style>
   </head>
   <body>
@@ -134,125 +141,111 @@ Date Last Modified: June 13, 2025
       <section class="split-section">
         <div class="left-half">
           <h2>Resume</h2>
-          <p>
-            <span class="year">2030</span>
-            <span class="team">PTC Academy</span>
-            <span class="role">Player Development Coach</span><br />
-            Helped players transition from recreational to competitive.
-            Emphasized <span class="highlight">IQ</span> and
-            <span class="highlight">spacing</span>.
-          </p>
+          <div class="resume">
+            <p>
+              <span class="year">2030</span>
+              <span class="team">PTC Academy</span>
+              <span class="role">Player Development Coach</span><br />
+              Helped players transition from recreational to competitive.
+              Emphasized IQ and spacing.
+            </p>
 
-          <p>
-            <span class="year">2031</span>
-            <span class="team">Junior Bisons</span>
-            <span class="role">U17 & College Team</span><br />
-            Started with U17 and was promoted to the college coaching staff.
-            Focused on <span class="highlight">maturity</span>,
-            <span class="highlight">defense</span>, and
-            <span class="highlight">team systems</span>.
-          </p>
+            <p>
+              <span class="year">2031</span>
+              <span class="team">Junior Bisons</span>
+              <span class="role">U17 & College Team</span><br />
+              Started with U17 and was promoted to the college coaching staff.
+              Focused on maturity, defense, and team systems.
+            </p>
 
-          <p>
-            <span class="year">2032</span>
-            <span class="team">Team Toba</span>
-            <span class="role">Assistant Coach – Canada Games</span><br />
-            Worked with top Manitoba talent. Contributed to
-            <span class="highlight">system planning</span> and
-            <span class="highlight">scouting</span>.
-          </p>
+            <p>
+              <span class="year">2032</span>
+              <span class="team">Team Toba</span>
+              <span class="role">Assistant Coach – Canada Games</span><br />
+              Worked with top Manitoba talent. Contributed to system planning
+              and scouting.
+            </p>
 
-          <p>
-            <span class="year">2034</span>
-            <span class="team">UPlay Canada EYBL U17</span>
-            <span class="role">Assistant Coach</span><br />
-            Joined one of Canada's top AAU programs. Qualified for
-            <span class="highlight">Peach Jam</span> and competed nationally.
-          </p>
+            <p>
+              <span class="year">2034</span>
+              <span class="team">UPlay Canada EYBL U17</span>
+              <span class="role">Assistant Coach</span><br />
+              Joined one of Canada's top AAU programs. Qualified for Peach Jam
+              and competed nationally.
+            </p>
 
-          <p>
-            <span class="year">2035</span>
-            <span class="team">Sea Bears</span>
-            <span class="role">CEBL Player Development Consultant</span><br />
-            Helped bridge younger Canadian players into the
-            <span class="highlight">professional circuit</span>.
-          </p>
+            <p>
+              <span class="year">2035</span>
+              <span class="team">Sea Bears</span>
+              <span class="role">CEBL Player Development Consultant</span><br />
+              Helped bridge younger Canadian players into the professional
+              circuit.
+            </p>
 
-          <p>
-            <span class="year">2036</span>
-            <span class="team">UCLA</span>
-            <span class="role">Graduate Assistant</span><br />
-            Focused on <span class="highlight">film scouting</span> and
-            <span class="highlight">guard development</span> in a high-tempo
-            system.
-          </p>
+            <p>
+              <span class="year">2036</span> <span class="team">UCLA</span>
+              <span class="role">Graduate Assistant</span><br />
+              Focused on film scouting and guard development in a high-tempo
+              system.
+            </p>
 
-          <p>
-            <span class="year">2038</span>
-            <span class="team">Auburn</span>
-            <span class="role">Assistant Coach – Recruiting</span><br />
-            Joined Bruce Pearl’s staff. Helped land a
-            <span class="highlight">top-20 recruiting class</span>.
-          </p>
+            <p>
+              <span class="year">2038</span> <span class="team">Auburn</span>
+              <span class="role">Assistant Coach – Recruiting</span><br />
+              Joined Bruce Pearl’s staff. Helped land a top-20 recruiting class.
+            </p>
 
-          <p>
-            <span class="year">2039</span>
-            <span class="team">University of Florida</span>
-            <span class="role">Associate Coach</span><br />
-            Led <span class="highlight">defensive strategy</span> and
-            <span class="highlight">backcourt development</span>. Reached the
-            <span class="highlight">Sweet 16</span>.
-          </p>
+            <p>
+              <span class="year">2039</span>
+              <span class="team">University of Florida</span>
+              <span class="role">Associate Coach</span><br />
+              Led defensive strategy and backcourt development.
+            </p>
 
-          <p>
-            <span class="year">2042</span>
-            <span class="team">New York Knicks</span>
-            <span class="role">Assistant Coach</span><br />
-            Joined <span class="highlight">Charen Gambir’s staff</span> to
-            rebuild team identity and player culture.
-          </p>
+            <p>
+              <span class="year">2042</span>
+              <span class="team">New York Knicks</span>
+              <span class="role">Assistant Coach</span><br />
+              Joined Charen Gambir’s staff to rebuild team identity and player
+              culture.
+            </p>
 
-          <p>
-            <span class="year">2044</span>
-            <span class="role">Retired</span><br />
-            Committed to <span class="highlight">giving back</span> and
-            developing the next generation of talent.
-          </p>
+            <p>
+              <span class="year">2044</span> <span class="role">Retired</span
+              ><br />
+              Committed to giving back and developing the next generation of
+              talent.
+            </p>
+          </div>
         </div>
 
         <div class="right-half">
           <div class="team-grid">
-            <img src="ucla.jpg" alt="UCLA" />
-            <img src="ucla.jpg" alt="Team 2" />
-            <img src="ucla.jpg" alt="Team 3" />
-            <img src="ucla.jpg" alt="Team 4" />
+            <img src="uclalogo.png" alt="UCLA" />
+            <img src="Sea Bears.png" alt="Team 2" />
+            <img src="Auburn.jpg" alt="Team 3" />
+            <img src="New-York-Knicks-Logo-paint-by-number.jpg" alt="Team 4" />
           </div>
         </div>
-        
+      </section>
 
       <section class="split-section reverse">
         <div class="left-half">
           <h2>Coaching Style</h2>
           <p>
-            <ul>
-              <li>
-                <span class="label">Pace Paced:</span> Push the ball in transition
-              </li>
-              <li>
-                <span class="label">Defense:</span> Not playing defense? You're running 20 manmakers.
-              </li>
-              <li>
-                <span class="label">Put the Ball in the Hoop:</span> 3, mid-range,
-                layup, anything.
-              </li>
-            </ul>
+            I coach with pace. We push the ball in transition and don’t waste
+            time. On defense, if you’re not playing hard, you're running 20
+            manmakers. Offensively, it’s about putting the ball in the hoop
+            whether it’s a three, a mid-range jumper or a layup. Whatever gets
+            it done.
           </p>
         </div>
+
         <div class="right-half">
           <img
             src="coach--yelling.png"
-            alt="Coach Kalkat explaining on court" 
-            class="left-half img"/>
+            alt="Coach Kalkat explaining on court"
+            class="left-half img" />
         </div>
       </section>
     </main>
