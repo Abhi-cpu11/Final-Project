@@ -213,6 +213,68 @@
         /* Bold font weight */
         font-weight: bold;
       }
+
+      /* Main Feedback Section Wrapper */
+      .rate-feedback {
+        /* Center-align text and buttons */
+        text-align: center;
+        /* Add space above the section */
+        margin-top: 3rem;
+      }
+
+      /* Container where JavaScript-generated content appears */
+      #rateResponse {
+        /* Space above the response area */
+        margin-top: 1.5rem;
+        /* Make the text white */
+        color: white;
+      }
+
+      /* Text Input Field Styling */
+      #rateFeedbackInput {
+        /* Inner spacing for comfort */
+        padding: 0.7rem;
+        /* Standard readable text */
+        font-size: 1rem;
+        /* Rounded corners for style */
+        border-radius: 5px;
+        /* Remove default border */
+        border: none;
+        /* Responsive width for small screens */
+        width: 80%;
+        /* Don’t let it get too wide on large screens */
+        max-width: 400px;
+        /* Space above the input */
+        margin-top: 0.5rem;
+      }
+
+      /* Styling for Submit Button */
+      #rateResponse button {
+        /* Space above the button */
+        margin-top: 1rem;
+        /* Primary blue color */
+        background-color: #3da1ff;
+        /* Button text color */
+        color: black;
+        /* Remove default border */
+        border: none;
+        /* Space inside the button */
+        padding: 0.8rem 1.4rem;
+        /* Bold text for emphasis */
+        font-weight: bold;
+        /* Rounded corners */
+        border-radius: 6px;
+        /* Change cursor to pointer on hover */
+        cursor: pointer;
+        /* Smooth hover effect */
+        transition: background-color 0.3s ease;
+      }
+
+      /* Hover Effect for Submit Button */
+      #rateResponse button:hover {
+        /* Change to orange on hover */
+        background-color: #ff9b3d;
+      }
     </style>
   </head>
   <body>
@@ -340,6 +402,18 @@
           </ul>
         </div>
       </section>
+      <!-- Rate Feedback Section (User Input) -->
+      <div class="rate-feedback">
+        <!-- Ask the user about your session rates -->
+        <p>Do you think my rates are fair?</p>
+
+        <!-- Two buttons to get user opinion: "Yes" or "No" -->
+        <button onclick="rateYes()">Yes</button>
+        <button onclick="rateNo()">No</button>
+
+        <!-- This container will hold the follow-up input and message dynamically -->
+        <div id="rateResponse"></div>
+      </div>
     </main>
 
     <!-- Footer with social links and quote -->
@@ -378,5 +452,47 @@
 
     <!-- JavaScript functionality -->
     <script src="script.js"></script>
+    <script>
+      // Called when the user clicks "Yes"
+      function rateYes() {
+        // Replace the inner HTML of the rateResponse div with a custom message, input, and button
+        document.getElementById("rateResponse").innerHTML = `
+          <p>Glad you think so!</p>  <!-- Displayed message -->
+          <label for="rateFeedbackInput">Any suggestions?</label><br>  <!-- Optional prompt -->
+          <input type="text" id="rateFeedbackInput" placeholder="Type here..."><br>  <!-- Text input -->
+          <button onclick="submitRateFeedback()">Submit</button>  <!-- Button triggers submission -->
+        `;
+      }
+
+      // Called when the user clicks "No"
+      function rateNo() {
+        // Update the inner HTML with a different message, input, and submit button
+        document.getElementById("rateResponse").innerHTML = `
+          <p>Thanks for your honesty.</p>  <!-- Acknowledge their feedback -->
+          <input type="text" id="rateFeedbackInput" placeholder="What do you think is fair?"><br>  <!-- Input field -->
+          <button onclick="submitRateFeedback()">Submit</button>  <!-- Button triggers submission -->
+        `;
+      }
+
+      // Called when the user submits the feedback input
+      function submitRateFeedback() {
+        // Grab the input field’s value and trim any extra whitespace
+        const input = document.getElementById("rateFeedbackInput").value.trim();
+
+        // Check if the user actually typed something
+        if (input) {
+          // Show a thank-you alert with their message
+          alert("Thanks for your feedback: " + input);
+
+          // Replace the rateResponse area with a final message
+          document.getElementById("rateResponse").innerHTML = `
+            <p style="color: #3da1ff;">Feedback received. Thank you!</p>
+          `;
+        } else {
+          // If the input is empty, prompt the user to fill it out
+          alert("Please enter your feedback.");
+        }
+      }
+    </script>
   </body>
 </html>

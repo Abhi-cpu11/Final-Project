@@ -1,4 +1,3 @@
-<!--Add a title to inbetween marginnandn nav-->
 <!DOCTYPE html>
 <!-- Declares this is an HTML5 document -->
 <html lang="en">
@@ -48,6 +47,68 @@
         /* Change to orange on hover */
         color: #ff9b3d;
       }
+
+      /* Title for hierachy */
+      #playerToCoachTitle {
+        /* Center-align the heading text */
+        text-align: center;
+        /* Top and bottom padding for spacing (3rem top, 1rem sides and bottom) */
+        padding: 3rem 1rem 1rem;
+        /* zorange text color for dark background contrast */
+        color: #ff9b3d;
+        /* Larger than h2, bold font for strong visual presence */
+        font-size: 3.5rem;
+        /* Make the text stand out with extra weight */
+        font-weight: bold;
+        /* Transition effect for smooth property changes */
+        transition: all 0.4s ease;
+        text-decoration: underline;
+      }
+
+      /* Wrapper for the quiz section */
+      .quiz-section {
+        /* Add space above this block */
+        margin-top: 3rem;
+        /* Center-align the content */
+        text-align: center;
+        /* White text for dark background contrast */
+        color: white;
+      }
+
+      /* Style each quiz answer button */
+      .quiz-section button {
+        /* Add vertical spacing between buttons */
+        margin: 0.5rem;
+        /* Add padding inside the button */
+        padding: 0.6rem 1rem;
+        /* Make text bold */
+        font-weight: bold;
+        /* Blue background for brand consistency */
+        background-color: #3da1ff;
+        /* Remove default border */
+        border: none;
+        /* Slightly rounded corners */
+        border-radius: 6px;
+        /* Change cursor to pointer on hover */
+        cursor: pointer;
+        /* Smooth transition when hovering */
+        transition: background-color 0.3s ease;
+      }
+      /* Hover effect for buttons */
+      .quiz-section button:hover {
+        /* Change button to orange on hover */
+        background-color: #ff9b3d;
+      }
+
+      /* Styling for the feedback text */
+      #quizFeedback {
+        /* Add space above the feedback message */
+        margin-top: 1rem;
+        /* Bold feedback message */
+        font-weight: bold;
+        /* Orange color for visibility and contrast */
+        color: #ff9b3d;
+      }
     </style>
   </head>
   <body>
@@ -80,6 +141,10 @@
     </header>
 
     <main>
+      <section>
+        <!-- Section heading displayed between navbar and main content -->
+        <div id="playerToCoachTitle">From Player to Coach</div>
+      </section>
       <!-- Section with YouTube video and story -->
       <section class="split-section">
         <!-- Left side: embedded video -->
@@ -154,6 +219,18 @@
             alt="Team Victory Celebration OVER ACAIDA SCHOOL. There is a aisstant coach on left side. 11 players in total and at the end is main coach holding his child. In the middle there is 2 indivduals holding a banner for grade 8 boys. Background is HGI and ground is a beige color with colored lines." />
         </div>
       </section>
+
+      <!-- Interactive quiz section to enhance user experience -->
+      <section class="quiz-section">
+        <h2>Quick Basketball IQ Check</h2>
+        <p>Which player is most responsible for rotating to stop a drive?</p>
+        <!-- Quiz answer buttons trigger the checkAnswer() function -->
+        <button onclick="checkAnswer('A')">A. Point Guard</button>
+        <button onclick="checkAnswer('B')">B. On-ball Defender</button>
+        <button onclick="checkAnswer('C')">C. Help-side Defender</button>
+        <!-- Feedback area to show results -->
+        <div id="quizFeedback"></div>
+      </section>
     </main>
 
     <!-- Footer section with social icons and quote -->
@@ -191,5 +268,25 @@
 
     <!-- Script that handles menu open/close -->
     <script src="script.js"></script>
+    <script>
+      // Function to check which answer the user selected
+      function checkAnswer(choice) {
+        // Get the feedback message element by its ID
+        const feedback = document.getElementById("quizFeedback");
+
+        // If user selects option 'C' (correct answer)
+        if (choice === "C") {
+          // Display a success message
+          feedback.innerText =
+            "Correct! Help-side defenders are crucial in smart team defense.";
+        }
+        // If user selects option A or B (incorrect answers)
+        else {
+          // Display a hint or encouragement
+          feedback.innerText =
+            "Not quite. Hint: It’s the one rotating to help teammates.";
+        }
+      }
+    </script>
   </body>
 </html>
